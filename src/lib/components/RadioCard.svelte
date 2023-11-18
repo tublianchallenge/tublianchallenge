@@ -2,13 +2,14 @@
     export let description = ""
     export let img = ""
     export let title = ""
-
+    export let group = undefined
+    export let value = undefined
     import Radio from "$lib/components/Radio.svelte"
 </script>
 
 <div class=" bg-[#1E1E1E] w-[250px] h-[288px] py-[14px] px-[38px] flex flex-col border-1 rounded-[20px] border-[1px] border-[#292929] relative">
     
-    <Radio/>
+    <Radio bind:group/>
     
     <div class="flex flex-row justify-center max-h-[128px] w-full mt-[25px]">
         <img src="{img}"/>
