@@ -32,5 +32,6 @@ Bonus Task
 Integrate the application with Stripe and develop the necessary backend API to add an extra layer of functionality.
 
 # Authors 
-Ayomide (Qudus) Hassan - (https://github.com/itsayopapi)
-Deshawn (Marquis) Williams -(https://github.com/MarquisTheCoder)
+Ayomide (Qudus) Hassan-(https://github.com/itsayopapi)
+<br>
+Deshawn (Marquis) Williams-(https://github.com/MarquisTheCoder)
