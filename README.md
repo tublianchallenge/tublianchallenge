@@ -11,14 +11,13 @@ Objective: Build a Customer Onboarding Application
 As members of the TublianX web development team, your task is to develop a new customer onboarding application. The provided Figma design serves as your guide, and your goal is to implement the front end, creating a pixel-perfect and functional interface.
 
 
-# Tech Stack
-
+# Tech Stack Used:
 SvelteKit
 Supabase
 Tailwind CSS
 Stripe API
 TypeScript
-
+<br>
 Design Pattern
 Adhere to the MVVM (Model, View, ViewModel) pattern in your frontend code to ensure modularity and maintainability.
 
