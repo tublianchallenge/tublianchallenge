@@ -1,31 +1,38 @@
 <script lang="ts">
+    import { onMount } from "svelte";
 
-        export let description = ""
-    export let img = ""
-    export let title = ""
-    export let group: number= 0
-    export let value: number= 0
 
-    export let checked = true;
+    export let img = String(undefined)
+    export let title = String(undefined)
+    export let description = String(undefined)
+    export let group: number = Number(undefined)
+    export let value: number = Number(undefined)
+
+    export let checked: boolean= Boolean(undefined);
     
     let classes = "radio-card-border-wrap p-[1px] bg-[#292929] rounded-[20px]"
-
-    // onMount(async () => {
-	// 	if (!checked) {
-    //         classes="radio-card-border-wrap p-[1px] bg-gradient-to-br from-[#F5C370] to-[#DB50B1] rounded-[20px]"
-    //     }else{ 
-    //         classes="radio-card-border-wrap p-[1px] bg-[#292929] rounded-[20px]"
-    //     }
     
-	// });
-    function getChecked(event){
-        checked = event.target.checked;
-    }
+    onMount(async () => {
+		if (checked == false) {
+            classes="radio-card-border-wrap p-[1px] bg-[#292929] rounded-[20px]"
+        }else{
+            classes="radio-card-border-wrap p-[1px] bg-gradient-to-br from-[#F5C370] to-[#DB50B1] rounded-[20px]"
+        }
+
+	});
+
+    // function getChecked(event: ){
+    //     checked = event.target.checked;
+    // }
+
+
     function handleClick(){
         if (!checked) {
+            classes="radio-card-border-wrap p-[1px] bg-gradient-to-br from-[#F5C370] to-[#DB50B1] rounded-[20px]" 
             return
         }
         checked = !checked;
+        classes="radio-card-border-wrap p-[1px] bg-[#292929] rounded-[20px]"
     }
 </script>
 
@@ -34,7 +41,7 @@
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <label on:click={handleClick} class={classes}>
 
-    <div class=" bg-[#1E1E1E] w-[250px] h-[288px] py-[14px] px-[38px] flex flex-col border-1 rounded-[20px] relative hover:bg-[#292929] hover:cursor-pointer">
+    <div class="bg-[#1E1E1E] w-[250px] h-[288px] py-[14px] px-[38px] flex flex-col border-1 rounded-[20px] relative hover:bg-[#292929] hover:cursor-pointer">
   
         <input checked={checked} type="radio" bind:group {value} class="absolute top-[14px] left-[212px]">
 
