@@ -13,7 +13,7 @@
 />
 
 <!-- Navigation Bar -->
-<div class="items-stretch self-stretch flex justify-between gap-5 -mr-5 max-md:max-w-full max-md:flex-wrap">
+<div class="flex gap-5 justify-between items-stretch self-stretch -mr-5 max-md:max-w-full max-md:flex-wrap">
   <!-- Sub-Image 1 -->
   <img
     loading="lazy"
@@ -22,11 +22,11 @@
   />
   
   <!-- Navigation Links -->
-  <div class="items-stretch self-center flex gap-3 my-auto max-md:max-w-full max-md:flex-wrap max-md:justify-center">
+  <div class="flex gap-3 items-stretch self-center my-auto max-md:max-w-full max-md:flex-wrap max-md:justify-center">
     <div role="link" tabindex="0" class="text-sm font-medium leading-5 bg-clip-text bg-[linear-gradient(109deg,#FBDA61_0%,rgba(255,90,205,0.84)_86.08%)]">1: Get Started</div>
     <div role="link" tabindex="0" class="text-sm font-medium leading-5 bg-clip-text bg-[linear-gradient(109deg,#FBDA61_0%,rgba(255,90,205,0.84)_86.08%)]">2: Create Account</div>
-    <div class="text-stone-500 text-sm font-medium leading-5">3: Account Setup</div>
-    <div class="text-stone-500 text-sm font-medium leading-5 whitespace-nowrap">4: Payment</div>
+    <div class="text-sm font-medium leading-5 text-stone-500">3: Account Setup</div>
+    <div class="text-sm font-medium leading-5 whitespace-nowrap text-stone-500">4: Payment</div>
   </div>
 </div>
 
@@ -36,7 +36,7 @@
 </div>
 
 <!-- Account Information -->
-<div class="text-blue-400 text-base font-medium leading-6 self-stretch whitespace-nowrap -mr-5 mt-7 max-md:max-w-full">
+<div class="self-stretch mt-7 -mr-5 text-base font-medium leading-6 text-blue-400 whitespace-nowrap max-md:max-w-full">
   <span class="text-stone-300">Creating account for</span>
   <span class="text-blue-400">@John Doe</span>
 </div>
@@ -62,9 +62,9 @@
 </div>
 
 <!-- Divider -->
-<div class="items-stretch self-stretch flex gap-2 -mr-5 mt-3.5 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
+<div class="flex gap-2 items-stretch self-stretch mt-3.5 -mr-5 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
   <hr class="bg-neutral-700 self-center w-[324px] shrink-0 h-px my-auto" aria-hidden="true" />
-  <span class="text-zinc-400 text-sm font-medium leading-5">Or</span>
+  <span class="text-sm font-medium leading-5 text-zinc-400">Or</span>
   <hr class="bg-neutral-700 self-center w-[324px] shrink-0 h-px my-auto" aria-hidden="true" />
 </div>
 
@@ -72,13 +72,13 @@
 <!-- ... (omitted for brevity) ... -->
 
 <!-- Login Link -->
-<div class="text-white text-base leading-6 self-stretch -mr-5 mt-3 max-md:max-w-full">
+<div class="self-stretch mt-3 -mr-5 text-base leading-6 text-white max-md:max-w-full">
   <span class="text-zinc-400">Already have an account?</span>
   <a href="#" class="font-bold text-white">Log in</a>
 </div>
 
 <!-- Footer Links -->
 <div class="items-stretch flex w-[276px] max-w-full gap-5 mt-32 self-start max-md:mt-10">
-  <a href="#" class="text-zinc-400 text-base leading-6">Privacy Policy</a>
-  <a href="#" class="text-zinc-400 text-base leading-6 whitespace-nowrap">Terms</a>
+  <a href="#" class="text-base leading-6 text-zinc-400">Privacy Policy</a>
+  <a href="#" class="text-base leading-6 whitespace-nowrap text-zinc-400">Terms</a>
 </div>
