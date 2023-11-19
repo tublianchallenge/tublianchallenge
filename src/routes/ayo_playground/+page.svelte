@@ -1,5 +1,5 @@
 <script>
-    import CreateAccount from "./CreateAccount.svelte";
+    import CreateAccount from "./Signup.svelte";
 
         
     
