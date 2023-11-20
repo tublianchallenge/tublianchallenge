@@ -1,16 +1,11 @@
 <script lang="ts">
-        export let img = String(undefined);
+    import { radioCards } from "$lib/stores/model";
+    export let img = String(undefined);
     export let title = String(undefined);
     export let description = String(undefined);
     export let group: number = Number(undefined);
     export let value: number = Number(undefined);
-
-    let radioCards = [
-        { id: 1, checked: false, radioBackground: "transparent", radioCardBorder: "linear-gradient(#292929, #292929)" },
-
-        // Add more objects for each radio card
-    ];
-
+    
     function selectRadioCard(card) {
         radioCards = radioCards.map((rc) => {
             if (rc.id === card.id) {
