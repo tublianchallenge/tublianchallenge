@@ -1,6 +1,5 @@
 <script lang="ts">
-    
-    export let img = String(undefined);
+        export let img = String(undefined);
     export let title = String(undefined);
     export let description = String(undefined);
     export let group: number = Number(undefined);
