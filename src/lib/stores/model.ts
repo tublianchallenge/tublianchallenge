@@ -2,7 +2,6 @@ import { writable } from 'svelte/store';
 
 export let profile_group = writable(1);
 
-
 function postgresDatetime() : String{
     let dateToStringConversion = new Date()
         .toISOString()
@@ -14,12 +13,12 @@ function postgresDatetime() : String{
 export let viewModel = writable({
 
 
-    user_profile: {
+    user: {
         dateCreated: Date(),
         firstName: String(undefined),
         lastName: String(undefined),
-
-    
+        email: String(undefined), //find way to validate later (maybe zod?)
+        password: String(undefined)
     },
 
     radioCards :[
