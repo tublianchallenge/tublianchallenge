@@ -12,28 +12,23 @@ function postgresDatetime() : String{
 
 export let viewModel = writable({
 
-
+    //TODO
+    //signup needs to implement google signup
     user: {
         dateCreated: Date(),
         firstName: String(undefined),
         lastName: String(undefined),
         email: String(undefined), //find way to validate later (maybe zod?)
-        password: String(undefined)
+        password: String(undefined), //needs encryption, implement
+        reason: String(undefined)  // why tublian (team, personal projects or recruiting)
     },
 
-    radioCards :[
-        { id: 1, checked: false, radioBackground: "transparent", radioCardBorder: "linear-gradient(#292929, #292929)" },
-        // Add more objects for each radio card
-    ],
-    user:{
-        firstname: undefined,
-        lastname: undefined
+    //making this a structure soit can be lowered or increased easily later
+    paymentPlan: {
+        professional: Number(19.99),
+        business: Number(49.99),
+        custom: Number(undefined)
     },
-    groups: {
-        payment: {
-            monthly: 1,
-            plan: 2
-        },
-        profile: 3
-    }
+
+   
 })
