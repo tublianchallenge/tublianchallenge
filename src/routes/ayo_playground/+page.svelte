@@ -1,4 +1,6 @@
 <script>
+    import CreateAccount from "./CreateAccount.svelte";
+
         
     
         
@@ -7,6 +9,7 @@
     <div id="playground" class="flex overflow-scroll flex-row gap-[50px] justify-start items-center w-[300vw] h-screen bg-[#121212] px-[300px]">
         
         <!-- components go here -->
+        <CreateAccount/>
     </div>
     
     <style>

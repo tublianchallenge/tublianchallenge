@@ -1,25 +1,24 @@
-<script>
-import RadioCard from "$lib/components/RadioCard.svelte";
+<script lang="ts">
 
-
-    
+    import Category from "$lib/components/playground/Category.svelte";
+    import RadioCard from "$lib/components/RadioCard.svelte";
+    let group: number = 1
 </script>
 
-<div id="playground" class="flex overflow-scroll flex-row gap-[50px] justify-start items-center w-[300vw] h-screen bg-[#121212] px-[300px]">
-    <RadioCard
-    title="Team Projects"
-    img={"/img/checkbox/tublian-vector_team.png"}
-    description="Hire developers for team projects."/>
+<div id="playground" class="flex overflow-y-scroll flex-col gap-[50px]  w-screen h-screen bg-[#121212] items-center py-[100px]">
 
-    <RadioCard
-    title="Personal Projects"
-    img={"/img/checkbox/tublian-vector_personal.png"}
-    description="Hire developers for professional projects."/>
+<!-- components go here -->
+    <Category category={"Checkbox's"}> 
+        <RadioCard
+        bind:group
+        value={1}
+        checked={true}
+        title="Team Projects"
+        img={"/img/checkbox/tublian-vector_team.png"}
+        description="Hire developers for team projects."/>
+        
+    </Category>
 
-    <RadioCard
-    title="Recruiting"
-    img={"/img/checkbox/tublian-vector_recruiting.png"}
-    description="Recruit developers for outstanding companies."/>
 </div>
 
 <style>
