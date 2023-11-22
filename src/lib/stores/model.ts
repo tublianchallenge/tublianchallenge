@@ -1,6 +1,5 @@
 import { writable } from 'svelte/store';
 export let viewModel = writable({
-
     //signup needs to implement google signup
     user: {
         dateCreated: Date(),
@@ -10,7 +9,6 @@ export let viewModel = writable({
         password: String(undefined), //needs encryption, implement
         reason: Number(undefined)  // why tublian (team, personal projects or recruiting)
     },
-    
     //making this a structure soit can be lowered or increased easily later
     paymentPlan: {
         professional: Number(19.99),
