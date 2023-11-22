@@ -1,5 +1,6 @@
 import { writable } from 'svelte/store';
 export let viewModel = writable({
+
     //signup needs to implement google signup
     user: {
         dateCreated: Date(),
