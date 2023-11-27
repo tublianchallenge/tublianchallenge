@@ -12,5 +12,5 @@ let colors: Object = {
 </script>
 
 <button style="background: ;" class="rounded-[30px] h-[40px] w-[359px] md:w-[360px] lg:w-[405px]">
-
+    <slot/>
 </button>
