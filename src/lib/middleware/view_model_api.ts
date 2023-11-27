@@ -6,6 +6,4 @@ export class ViewModelApi{
     constructor (
         private model: Writable<{}> = viewModel
     ){}
-    
-    
 }

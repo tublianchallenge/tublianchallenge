@@ -11,8 +11,8 @@ export let viewModel = writable({
     },
     //making this a structure soit can be lowered or increased easily later
     paymentPlan: {
-        professional: Number(19.99),
-        business: Number(49.99),
-        custom: Number(undefined)
-    },
+        time: Boolean, // annual or monthly,
+        type: Number(undefined)
+
+    }
 })
