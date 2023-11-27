@@ -1,5 +1,5 @@
 <script lang="ts">
-
+    import Button from "$lib/components/buttons/Button.svelte";
     import Category from "$lib/components/playground/Category.svelte";
         let group: number = 1
 </script>
@@ -8,7 +8,11 @@
 
 <!-- components go here -->
     <Category category={"Checkbox's"}> 
-    
+        <Button>Proceed</Button>
+        <Button>Subscribe</Button>
+        <Button category={"special"}>
+            <p class="text-white">Contact Us</p>
+        </Button>
     </Category>
 
 </div>
