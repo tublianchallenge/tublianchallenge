@@ -1,18 +1,22 @@
 <script lang="ts">
     import Button from "$lib/components/buttons/Button.svelte";
+    import Text from "$lib/components/inputs/Text.svelte";
     import Category from "$lib/components/playground/Category.svelte";
-        let group: number = 1
 </script>
 
 <div id="playground" class="flex overflow-y-scroll flex-col gap-[50px]  w-screen h-screen bg-[#121212] items-center py-[100px]">
 
 <!-- components go here -->
-    <Category category={"Checkbox's"}> 
-        <Button>Proceed</Button>
+    <Category category={"Checkbox's"}>
+        <div class="flex flex-col gap-10">
+<Button>Proceed</Button>
         <Button>Subscribe</Button>
         <Button category={"special"}>
             <p class="text-white">Contact Us</p>
         </Button>
+        <Text></Text> 
+        </div>
+        
     </Category>
 </div>
 

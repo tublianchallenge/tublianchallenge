@@ -4,4 +4,4 @@
 </script>
 
 
-<input {type} {placeholder}>
+<input {type} {placeholder} class="font-space-grotesk text-[#888888] w-[358px] h-[48px] bg-transparent" style="border-bottom: #888888">
