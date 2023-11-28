@@ -1,6 +1,7 @@
 <script lang="ts">
     import Button from "$lib/components/buttons/Button.svelte";
     import Text from "$lib/components/inputs/Text.svelte";
+    import Logo from "$lib/components/main/Logo.svelte";
     import Category from "$lib/components/playground/Category.svelte";
 </script>
 
@@ -9,12 +10,14 @@
 <!-- components go here -->
     <Category category={"Checkbox's"}>
         <div class="flex flex-col gap-10">
-<Button>Proceed</Button>
+        <Button>Proceed</Button>
         <Button>Subscribe</Button>
         <Button category={"special"}>
             <p class="text-white">Contact Us</p>
         </Button>
-        <Text></Text> 
+        <Text></Text>
+        <Text placeholder={"Last Name"}></Text> 
+        <Logo/>
         </div>
         
     </Category>
