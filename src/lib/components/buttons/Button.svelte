@@ -14,6 +14,6 @@ let colors = {
 }
 </script>
 
-<button style="background: {colors[category]};" class="rounded-[30px] h-[40px] w-[359px] md:w-[360px] lg:w-[405px] font-[500] font-space-grotesk text-[16px]">
+<button on:click style="background: {colors[category]};" class="rounded-[30px] h-[40px] w-full md:w-[360px] lg:w-[405px] font-[500] font-space-grotesk text-[16px]">
     <slot/>
 </button>
