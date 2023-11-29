@@ -18,8 +18,7 @@
         <Text></Text>
         <Text placeholder={"Last Name"}></Text> 
         <Logo/>
-        </div>
-        
+        </div> 
     </Category>
 </div>
 
