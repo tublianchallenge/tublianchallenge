@@ -1,6 +1,11 @@
 
 <script lang="ts">
-   </script>
+   import { viewModel } from "$lib/stores/model";
+
+   viewModel.subscribe((model) => {
+    model.page 
+   })
+</script>
 
 <ul class="text-[#696969] flex flex-row gap-[12px] font-[400] w-full md:w-358px flex-wrap" >
     <li class="selected">1: Get Started</li>
