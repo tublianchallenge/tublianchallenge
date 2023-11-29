@@ -18,23 +18,25 @@ let background: string = colors.default;
 let border: string = colors.tranparent;
 let text: string = "#000";
 
-onMount(async () => {
-		
-        if(category === "special"){
-            background = colors.special;
-            border = "none";
-            text = "#fff";
+if(category === "special"){
+    background = colors.special;
+    border = "none";
+    text = "#fff";
 
-        }else if(category === "google"){
-            background = "none";
-            border = colors.special;
-            text = "#fff";
-        }
-});
+}else if(category === "google"){
+    background = "#121212";
+    border = colors.special;
+    text = "#ffffffdd";
+}
+
 </script>
-
-<div class="w-full p-[1px] rounded-[30px]" style="background: {border}">
-    <button on:click {type} style="background: {background}; color: {text}" class="rounded-[30px] h-[40px] w-full md:w-[360px] lg:w-[405px] font-[500] font-space-grotesk text-[16px]">
-        <slot/>
+<div class="w-full p-[1px] rounded-[30px]" style="background-image: {border}">
+    <button on:click {type} style="background: {background}; color: {text}" class="rounded-[30px] h-[40px] w-full md:w-[360px] lg:w-[405px] font-[400] font-space-grotesk text-[16px]">
+        <div class="flex flex-row justify-center items-center gap-[10px]">
+            {#if category === "google"}
+                <img src="/img/google/google-logo.png" alt=""> 
+            {/if}
+            <slot/>
+        </div>
     </button>
 </div>
