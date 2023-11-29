@@ -22,5 +22,13 @@
       <Text placeholder={"Email"} name={"email"}></Text>
       <Text placeholder={"Password"} name={"password"}></Text>
       <Button type={"submit"}>Create Account</Button>
+      <div class="flex flex-row items-center w-full">
+        <div class="grow h-[1px] bg-slate-500/40"></div>
+        <p class="text-white/50 font-space-grotesk text-[10px] m-2 font-thin">Or</p>
+        <div class="grow h-[1px] bg-slate-500/40"></div>
+      </div>
+      <Button category={"google"}>Sign up with google</Button>
       <AccountQuestion/>
+
+
     </div>
