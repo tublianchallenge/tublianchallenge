@@ -11,9 +11,9 @@
     
     <div id="page-wrapper" class="px-[16px] py-[25px] flex flex-col justify-start h-full w-full gap-[20px] items-center">
       <Navbar/>
-      <div class="flex flex-col gap-[10px] w-full">
+      <div class="flex flex-col gap-[5px] w-full">
         <p class="text-white/90 font-space-grotesk text-[20px] font-[700] mt-[20px]">Get Started</p>
-        <p class="my-2 text-white/80 font-space-grotesk">Start recruiting streetcred developers, Today!!</p>
+        <p class="text-white/80 font-space-grotesk">Start recruiting streetcred developers, Today!!</p>
       </div>
     
       

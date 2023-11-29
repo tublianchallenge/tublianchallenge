@@ -31,7 +31,7 @@ if(category === "special"){
 
 </script>
 <div class="w-full p-[1px] rounded-[30px]" style="background-image: {border}">
-    <button on:click {type} style="background: {background}; color: {text}" class="rounded-[30px] h-[40px] w-full md:w-[360px] lg:w-[405px] font-[400] font-space-grotesk text-[16px]">
+    <button on:click {type} style="background: {background}; color: {text}" class="rounded-[30px] h-[40px] w-full  font-[400] font-space-grotesk text-[16px] cursor-pointer">
         <div class="flex flex-row justify-center items-center gap-[10px]">
             {#if category === "google"}
                 <img src="/img/google/google-logo.png" alt=""> 
