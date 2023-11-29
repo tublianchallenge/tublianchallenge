@@ -1,15 +1,11 @@
 <script>
-    import CreateAccount from "./CreateAccount.svelte";
-
-        
-    
-        
+    import CreateAccountComponents from "./CreateAccountComponents.svelte";
     </script>
     
     <div id="playground" class="flex overflow-scroll flex-row gap-[50px] justify-start items-center w-[300vw] h-screen bg-[#121212] px-[300px]">
         
         <!-- components go here -->
-        <CreateAccount/>
+        <CreateAccountComponents/>
     </div>
     
     <style>

@@ -1,17 +1,21 @@
 
 <script lang="ts">
    import { viewModel } from "$lib/stores/model";
+   export let page = 1;
+   function checkPage(){
 
+   }
+   
    viewModel.subscribe((model) => {
-    model.page 
+    model.page
    })
 </script>
 
 <ul class="text-[#696969] flex flex-row gap-[12px] font-[400] w-full md:w-358px flex-wrap" >
     <li class="selected">1: Get Started</li>
-    <li class="selected">2: Create Account</li>
-    <li>3: Account Setup</li>
-    <li>4: Payment</li>
+    <li class={page >= 2 ? "selected" : ""}>2: Create Account</li>
+    <li class={page >= 3 ? "selected" : ""}>3: Account Setup</li>
+    <li class={page >= 4 ? "selected" : ""} >4: Payment</li>
 </ul>
 
 <style>

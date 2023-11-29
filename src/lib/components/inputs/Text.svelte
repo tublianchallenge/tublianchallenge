@@ -1,6 +1,6 @@
 <script lang="ts">
     export let type= "text";
-    export let name = 
+    export let name = "Name";
     export let placeholder = "Placeholder";
 </script>
 
