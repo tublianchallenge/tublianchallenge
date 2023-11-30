@@ -2,8 +2,10 @@
 
   <script>
     // import GetStarted from "$lib/components/pages/GetStarted.svelte";
-    // import CreateAccount from "./ayo_playground/CreateAccountComponents.svelte";
     import CreateAccount from "$lib/components/pages/CreateAccount.svelte";
+    import viewModel from "$lib/stores/model";
+
+    viewModel.init();
   </script>
 
   <div>
