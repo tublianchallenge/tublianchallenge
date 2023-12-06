@@ -45,7 +45,7 @@
     <div class="logo-container">
       <div class="logo">
       </div>
-      <div class="text-white text-xs font-ReceptsNFW01-Regular">Tublian</div>
+      <div class="text-xs text-white font-ReceptsNFW01-Regular">Tublian</div>
     </div>
   
     <div class="text-container">
@@ -61,10 +61,10 @@
     </div>
   
     <div class="absolute w-177 h-177 left-202 top-68">
-      <div class="absolute w-95 h-95 left-41 top-41 flex justify-center items-center">
+      <div class="flex absolute justify-center items-center w-95 h-95 left-41 top-41">
         <div class="relative w-95 h-95">
-          <div class="absolute w-79 h-79 left-8 top-8 bg-green-500 rounded-full"></div>
-          <div class="absolute w-95 h-95 left-95 top-95 transform -rotate-180 opacity-0"></div>
+          <div class="absolute top-8 left-8 bg-green-500 rounded-full w-79 h-79"></div>
+          <div class="absolute opacity-0 transform -rotate-180 w-95 h-95 left-95 top-95"></div>
         </div>
       </div>
     </div>
