@@ -1,11 +1,11 @@
 <script>
     
-    import { firstName, lastName } from "$lib/stores/model";
+    import { firstName, lastName, page } from "$lib/stores/model";
     import Button from "../buttons/Button.svelte";
     import Text from "../inputs/Text.svelte";
     import AccountQuestion from "../main/AccountQuestion.svelte";
     import Navbar from "../main/Navbar.svelte";
-
+    
     /**
      * @param {{ target: { firstName: { value: string; }; lastName: { value: string; }; }; }} event
      */
@@ -20,7 +20,7 @@
 <div class="flex flex-row">
   
   <div>
-    <img src="/img/pages/first.png" alt="" class="hidden h-screen md:block md:min-w-[45vw]">
+    <img src="/img/pages/first.png" alt="" class="hidden h-screen md:block md:min-w-[48vw]">
   </div>
   
   <div  class="px-[16px] py-[25px] flex flex-col justify-start h-full w-full gap-[20px] items-center">
@@ -30,7 +30,9 @@
       <p class="text-white/80 font-space-grotesk">Start recruiting streetcred developers, Today!!</p>
     </div>
     
-    <form action="" class="flex flex-col gap-[20px]" on:submit|preventDefault={updateNames}>
+    <form action="" class="flex flex-col gap-[20px]" on:submit|preventDefault={() => {
+      $page = 2;
+      updateNames}}>
       <div class="px-[16px]">
         <Text id="firstName" placeholder={"First Name"} name={"firstName"}></Text>
         <Text id="lastName" placeholder={"Last Name"} name={"lastName"}></Text>

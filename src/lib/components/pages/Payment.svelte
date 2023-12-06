@@ -14,7 +14,7 @@
   
     .logo {
       @apply w-14 h-16 relative;
-  
+    
       div {
         @apply absolute;
       }
