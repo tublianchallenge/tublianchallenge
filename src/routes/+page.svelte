@@ -1,15 +1,13 @@
 
 
   <script>
-    // import GetStarted from "$lib/components/pages/GetStarted.svelte";=
+    import GetStarted from "$lib/components/pages/GetStarted.svelte";
     // import CreateAccount from "./ayo_playground/CreateAccountComponents.svelte";
     // import CreateAccount from "$lib/components/pages/CreateAccount.svelte";
-    import AccountSetup from "$lib/components/pages/AccountSetup.svelte";
-  </script>
+      </script>
 
   <div>
-    <!-- <GetStarted/> -->
-    <AccountSetup/>
+    <GetStarted/>
 
   </div>
   <style lang="postcss">

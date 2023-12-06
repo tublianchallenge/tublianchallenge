@@ -1,13 +1,10 @@
 
 <script lang="ts">
       export let page = 1;
-   function checkPage(){
-
-   }
- 
+   
 </script>
 
-<ul class="text-[#696969] flex flex-row gap-[12px] font-[400] w-full md:w-358px flex-wrap" >
+<ul class="text-[#696969] flex flex-row gap-[12px] font-[400] w-full md:w-358px flex-wrap">
     <li class="selected">1: Get Started</li>
     <li class={page >= 2 ? "selected" : ""}>2: Create Account</li>
     <li class={page >= 3 ? "selected" : ""}>3: Account Setup</li>
