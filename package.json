@@ -14,6 +14,7 @@
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/kit": "^1.27.4",
+		"@types/bcrypt": "^5.0.2",
 		"autoprefixer": "^10.4.16",
 		"gh-pages": "^6.0.0",
 		"postcss": "^8.4.31",
