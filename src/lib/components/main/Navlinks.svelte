@@ -1,14 +1,10 @@
 
 <script lang="ts">
-   import { viewModel } from "$lib/stores/model";
-   export let page = 1;
+      export let page = 1;
    function checkPage(){
 
    }
-   
-   viewModel.subscribe((model) => {
-    model.page
-   })
+ 
 </script>
 
 <ul class="text-[#696969] flex flex-row gap-[12px] font-[400] w-full md:w-358px flex-wrap" >
