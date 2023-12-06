@@ -5,14 +5,15 @@
   import AccountQuestion from "$lib/components/main/AccountQuestion.svelte";
   import Navbar from "$lib/components/main/Navbar.svelte";
   import { email, page, password } from "$lib/stores/model";
-  import bcrypt from "bcrypt";
+  
   function updateCredentials(event){
       $email = event.target.email.value;
       $password = event.target.password.value;
     }
 
     async function hashPassword(password: string){
-      return await bcrypt
+
+      return await 
     }
 </script>
     
