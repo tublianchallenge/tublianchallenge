@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 
   import Button from "$lib/components/buttons/Button.svelte";
   import Text from "$lib/components/inputs/Text.svelte";
@@ -9,6 +9,10 @@
   function updateCredentials(event){
       $email = event.target.email.value;
       $password = event.target.password.value;
+    }
+
+    async function hashPassword(password: string){
+      return await bcrypt
     }
 </script>
     
@@ -32,7 +36,7 @@
       }}>
     <div class="flex flex-col items-start w-full">
       <Text id={"email"} placeholder={"Email"} name={"email"}></Text>
-      <Text id={"password"} placeholder={"Password"} name={"password"}></Text>
+      <Text  type={"password"} id={"password"} placeholder={"Password"} name={"password"}></Text>
     </div>
     
     <div class="w-full">
