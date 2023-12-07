@@ -1,67 +1,201 @@
 
-  
-  <style>
-    .container {
-      @apply w-[580px] h-[491px] relative bg-gray-900 rounded-lg overflow-hidden border border-gray-800;
-    }
-  
-    .logo-container {
-      @apply absolute left-20 top-20 flex justify-start items-center space-x-8;
-    }
-  
-    .logo {
-      @apply w-14 h-16 relative;
-    
-      
-    }
-    
-    .text-container {
-      @apply absolute w-[540px] left-20 text-center text-gray-300;
-    }
-  
-    .title {
-      @apply text-5xl font-bold leading-[16px];
-    }
-  
-    .description {
-      @apply text-lg font-medium leading-6;
-    }
-  
-    .button-container {
-      @apply absolute w-[540px] p-4 left-20 bottom-8 flex justify-center items-center bg-yellow-400 rounded-full;
-    }
-  
-    .button-text {
-      @apply text-lg font-medium text-gray-900;
-    }
-  </style>
-  
-  <div class="container">
-    <div class="logo-container">
-      <div class="logo">
-      </div>
-      <div class="text-xs text-white font-ReceptsNFW01-Regular">Tublian</div>
-    </div>
-  
-    <div class="text-container">
-      <div class="title">Payment Successful</div>
-      <div class="description">Your payment went through successfully.</div>
-    </div>
-  
-    <div class="button-container">
-      <div class="button-text">Proceed</div>
-    </div>
-  
-    <div class="absolute w-580 h-314">
-    </div>
-  
-    <div class="absolute w-177 h-177 left-202 top-68">
-      <div class="flex absolute justify-center items-center w-95 h-95 left-41 top-41">
-        <div class="relative w-95 h-95">
-          <div class="absolute top-8 left-8 bg-green-500 rounded-full w-79 h-79"></div>
-          <div class="absolute opacity-0 transform -rotate-180 w-95 h-95 left-95 top-95"></div>
-        </div>
+<script>
+  export let tickImage = "./img/tick-circle.svg";
+  export let starImage = "./img/star-66.svg";
+
+  const frameStyle = {
+    position: "relative",
+    width: "580px",
+    height: "491px",
+    backgroundColor: "var(--base50-dark)",
+    borderRadius: "20px",
+    overflow: "hidden",
+    borderColor: "var(--base100-dark)",
+  };
+
+  const overlapStyle = {
+    position: "absolute",
+    width: "580px",
+    height: "314px",
+    top: "0",
+    left: "0",
+  };
+
+  const logoWrapperStyle = {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "385px",
+    position: "absolute",
+    top: "20px",
+    left: "20px",
+  };
+
+  const logoStyle = {
+    position: "relative",
+    width: "123px",
+    height: "25.08px",
+  };
+
+  const groupWrapperStyle = {
+    position: "absolute",
+    width: "580px",
+    height: "314px",
+    top: "0",
+    left: "0",
+    backgroundImage: "url(./img/frame-658.svg)",
+    backgroundSize: "100% 100%",
+  };
+
+  const groupStyle = {
+    position: "relative",
+    width: "177px",
+    height: "177px",
+    top: "68px",
+    left: "202px",
+  };
+
+  const overlapGroupStyle = {
+    position: "relative",
+    width: "159px",
+    height: "159px",
+    top: "9px",
+    left: "9px",
+    backgroundImage: `url(${starImage})`,
+    backgroundSize: "100% 100%",
+  };
+
+  const tickStyle = {
+    position: "absolute",
+    width: "95px",
+    height: "95px",
+    top: "32px",
+    left: "32px",
+  };
+
+  const textWrapperStyle = {
+    position: "absolute",
+    width: "540px",
+    top: "325px",
+    left: "20px",
+    fontFamily: "var(--text-3xl-font-bold-font-family)",
+    fontWeight: "var(--text-3xl-font-bold-font-weight)",
+    color: "var(--base800-dark)",
+    fontSize: "var(--text-3xl-font-bold-font-size)",
+    textAlign: "center",
+    letterSpacing: "var(--text-3xl-font-bold-letter-spacing)",
+    lineHeight: "var(--text-3xl-font-bold-line-height)",
+    fontStyle: "var(--text-3xl-font-bold-font-style)",
+  };
+
+  const paragraphStyle = {
+    position: "absolute",
+    width: "540px",
+    top: "378px",
+    left: "20px",
+    fontFamily: "var(--text-base-font-medium-font-family)",
+    fontWeight: "var(--text-base-font-medium-font-weight)",
+    color: "var(--base800-dark)",
+    fontSize: "var(--text-base-font-medium-font-size)",
+    textAlign: "center",
+    letterSpacing: "var(--text-base-font-medium-letter-spacing)",
+    lineHeight: "var(--text-base-font-medium-line-height)",
+    fontStyle: "var(--text-base-font-medium-font-style)",
+  };
+
+  const buttonWrapperStyle = {
+    display: "flex",
+    width: "540px",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "8px",
+    padding: "8px 16px",
+    position: "absolute",
+    top: "431px",
+    left: "20px",
+    backgroundColor: "var(--primarygold-300)",
+    borderRadius: "30px",
+    all: "unset",
+    boxSizing: "border-box",
+  };
+
+  const buttonStyle = {
+    position: "relative",
+    width: "fit-content",
+    marginTop: "-1px",
+    fontFamily: "var(--text-base-font-medium-font-family)",
+    fontWeight: "var(--text-base-font-medium-font-weight)",
+    color: "var(--base900-light)",
+    fontSize: "var(--text-base-font-medium-font-size)",
+    letterSpacing: "var(--text-base-font-medium-letter-spacing)",
+    lineHeight: "var(--text-base-font-medium-line-height)",
+    whiteSpace: "nowrap",
+    fontStyle: "var(--text-base-font-medium-font-style)",
+    all: "unset",
+    boxSizing: "border-box",
+  };
+</script>
+
+<style>
+  .frame {
+    {@html frameStyle}
+  }
+
+  .frame .overlap {
+    {@html overlapStyle}
+  }
+
+  .frame .div {
+    {@html logoWrapperStyle}
+  }
+
+  .frame .logo {
+    {@html logoStyle}
+  }
+
+  .frame .group-wrapper {
+    {@html groupWrapperStyle}
+  }
+
+  .frame .group {
+    {@html groupStyle}
+  }
+
+  .frame .overlap-group {
+    {@html overlapGroupStyle}
+  }
+
+  .frame .vuesax-bold-tick {
+    {@html tickStyle}
+  }
+
+  .frame .text-wrapper {
+    {@html textWrapperStyle}
+  }
+
+  .frame .p {
+    {@html paragraphStyle}
+  }
+
+  .frame .button  {
+    {@html buttonWrapperStyle}
+  }
+
+  .frame .button-2 {
+    {@html buttonStyle}
+  }
+</style>
+
+<div class="frame">
+  <div class="overlap">
+    <div class="div"><img class="logo" src="img/logo.png" /></div>
+    <div class="group-wrapper">
+      <div class="group">
+        <div class="overlap-group"><img class="vuesax-bold-tick" src={tickImage} /></div>
+
       </div>
     </div>
   </div>
-  
+  <div class="text-wrapper">Payment Successful</div>
+  <p class="p">Your payment went through successfully.</p>
+  <button class="button"><button class="button-2">Proceed</button></button>
+</div>
