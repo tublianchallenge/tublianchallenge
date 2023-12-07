@@ -1,5 +1,4 @@
 <script>
-    
     import { firstName, lastName, page } from "$lib/stores/model";
     import Button from "../buttons/Button.svelte";
     import Text from "../inputs/Text.svelte";
@@ -15,11 +14,9 @@
       $lastName = event.target.lastName.value;
       console.log($firstName, $lastName);
     }
-    
 </script>
-    
+ 
 <div class="flex flex-row">
-  
   <div>
     <img src="/img/pages/first.png" alt="" class="hidden h-screen md:block md:min-w-[48vw]">
   </div>
@@ -33,7 +30,8 @@
     
     <form class="flex flex-col gap-[20px]" on:submit|preventDefault={() => {
       $page = 2;
-      updateNames}}>
+      updateNames
+      }}>
       <div class="px-[16px]">
         <Text id="firstName" placeholder={"First Name"} name={"firstName"}></Text>
         <Text id="lastName" placeholder={"Last Name"} name={"lastName"}></Text>
@@ -44,12 +42,10 @@
             updateNames}
           } type={"submit"}>Proceed</Button>
         </div>
-
     </form>
     
     <div class="px-[16px] w-full flex flex-row justify-start">
       <AccountQuestion/>
     </div>
   </div>
-
 </div>

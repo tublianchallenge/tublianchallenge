@@ -23,8 +23,6 @@
 </div>
 
 <style>
-   
-    
     input[type="radio"]{
         -webkit-appearance: none;
         appearance: none;
