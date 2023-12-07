@@ -12,7 +12,7 @@
     overflow: "hidden",
     borderColor: "var(--base100-dark)",
   };
-
+  
   const overlapStyle = {
     position: "absolute",
     width: "580px",
