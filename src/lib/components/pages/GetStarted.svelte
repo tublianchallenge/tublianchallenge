@@ -15,6 +15,7 @@
       $lastName = event.target.lastName.value;
       console.log($firstName, $lastName);
     }
+    
 </script>
     
 <div class="flex flex-row">
@@ -22,7 +23,7 @@
   <div>
     <img src="/img/pages/first.png" alt="" class="hidden h-screen md:block md:min-w-[48vw]">
   </div>
-  
+
   <div  class="px-[16px] py-[25px] flex flex-col justify-start h-full w-full gap-[20px] items-center">
     <Navbar/>
     <div class="flex flex-col px-[16px] gap-[5px] w-full">
@@ -38,7 +39,10 @@
         <Text id="lastName" placeholder={"Last Name"} name={"lastName"}></Text>
         </div>
         <div class="px-[16px] w-full flex flex-col gap-[10px]">
-          <Button type={"submit"}>Proceed</Button>
+          <Button on:click={function(){
+            $page = 2;
+            updateNames}
+          } type={"submit"}>Proceed</Button>
         </div>
 
     </form>
