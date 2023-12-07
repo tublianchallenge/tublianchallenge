@@ -6,7 +6,7 @@
 </script>
 
 <div>
-    <div class="relative w-full radio-card font-space-grotesk h-[100px] w-full md:h-[288px] md:w-[250px]">
+    <div class="relative w-full radio-card font-space-grotesk h-[100px] md:h-[288px] md:w-[250px]">
             <input type="radio" name="use" {id} class="w-full h-full md:w-[250px] md:h-[288px]">
             <label for={id}></label>
             <div class="absolute top-0 left-0 z-20 w-full h-full md:w-[250px] md:h-[288px] rounded-[20px pointer-events-none">
@@ -29,16 +29,12 @@
         -webkit-appearance: none;
         appearance: none;
         background-color:#1E1E1E;
-        
         border-radius: 20px;
         top: 0;
         left: 0;
         position: absolute;
         cursor: pointer;
         outline: none;
-    }
-    input[type="radio"]{
-        
     }
 
     input[type="radio"]:before{

@@ -30,7 +30,7 @@
       <p class="text-white/80 font-space-grotesk">Start recruiting streetcred developers, Today!!</p>
     </div>
     
-    <form action="" class="flex flex-col gap-[20px]" on:submit|preventDefault={() => {
+    <form class="flex flex-col gap-[20px]" on:submit|preventDefault={() => {
       $page = 2;
       updateNames}}>
       <div class="px-[16px]">
