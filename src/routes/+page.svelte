@@ -1,15 +1,21 @@
 
 
   <script>
-    // import GetStarted from "$lib/components/pages/GetStarted.svelte";
-    // import CreateAccount from "./ayo_playground/CreateAccountComponents.svelte";
+    import AccountSetup from "$lib/components/pages/AccountSetup.svelte";
     import CreateAccount from "$lib/components/pages/CreateAccount.svelte";
-  </script>
+    import GetStarted from "$lib/components/pages/GetStarted.svelte";
+    import { page } from "$lib/stores/model";
+      </script>
 
   <div>
-    <!-- <GetStarted/> -->
+    {#if $page == 1}
+    <GetStarted/>
+    {:else if $page == 2}
     <CreateAccount/>
-
+    {:else if $page == 3}
+    <AccountSetup/>
+    {/if}
+    
   </div>
   <style lang="postcss">
     :global(html) {
