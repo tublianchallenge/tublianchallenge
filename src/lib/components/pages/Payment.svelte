@@ -1,11 +1,8 @@
-<script>
-    // Import Tailwind CSS
-    import 'tailwindcss/tailwind.css';
-  </script>
+
   
   <style>
     .container {
-      @apply w-580 h-491 relative bg-gray-900 rounded-lg overflow-hidden border border-gray-800;
+      @apply w-[580px] h-[491px] relative bg-gray-900 rounded-lg overflow-hidden border border-gray-800;
     }
   
     .logo-container {
@@ -15,17 +12,15 @@
     .logo {
       @apply w-14 h-16 relative;
     
-      div {
-        @apply absolute;
-      }
+      
     }
-  
+    
     .text-container {
-      @apply absolute w-540 left-20 text-center text-gray-300;
+      @apply absolute w-[540px] left-20 text-center text-gray-300;
     }
   
     .title {
-      @apply text-5xl font-bold leading-16;
+      @apply text-5xl font-bold leading-[16px];
     }
   
     .description {
@@ -33,7 +28,7 @@
     }
   
     .button-container {
-      @apply absolute w-540 p-4 left-20 bottom-8 flex justify-center items-center bg-yellow-400 rounded-full;
+      @apply absolute w-[540px] p-4 left-20 bottom-8 flex justify-center items-center bg-yellow-400 rounded-full;
     }
   
     .button-text {
