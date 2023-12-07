@@ -8,7 +8,7 @@
   </script>
 
   
-  {#if $page == 1}
+  {#if $page == 1 }
   <GetStarted/>
   {:else if $page == 2}
   <CreateAccount/>
