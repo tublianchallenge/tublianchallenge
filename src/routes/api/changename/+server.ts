@@ -13,7 +13,7 @@ export const GET: RequestHandler = async ({ locals: { supabase, getSession } }) 
     return json({ data });
 };
 
-export const POST: RequestHandler = RequestHandler = async ({ locals: { supabase, getSession } }) => {
+export const POST: RequestHandler = async ({ locals: { supabase, getSession } }) => {
     const session = await getSession();
     if (!session) {
         // the user is not signed in

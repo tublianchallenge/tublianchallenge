@@ -10,6 +10,7 @@ export let type: string = "button";
 
 let colors: Object = {
     default: "#FDD648",
+    
     special: "linear-gradient( to right bottom,#FDD648 , #DB50B1)",
     transparent:  "linear-gradient( #00000000, #00000000)"
 }

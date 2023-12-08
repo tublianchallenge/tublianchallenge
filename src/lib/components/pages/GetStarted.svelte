@@ -1,18 +1,28 @@
 <script>
-    import { firstName, lastName, page } from "$lib/stores/model";
+    import { goto } from '$app/navigation';
+    import { firstName, lastName } from "$lib/stores/model";
     import Button from "../buttons/Button.svelte";
-    import Text from "../inputs/Text.svelte";
     import AccountQuestion from "../main/AccountQuestion.svelte";
     import Navbar from "../main/Navbar.svelte";
-    
     /**
      * @param {{ target: { firstName: { value: string; }; lastName: { value: string; }; }; }} event
      */
 
+    
     function updateNames(event){
       $firstName = event.target.firstName.value;
       $lastName = event.target.lastName.value;
       console.log($firstName, $lastName);
+    }
+
+    function nextPage(){
+      goto('/create');
+    }
+    
+    function handleSubmit(event){
+      event.preventDefault;
+      updateNames(event);
+      nextPage();
     }
 </script>
  
@@ -28,24 +38,21 @@
       <p class="text-white/80 font-space-grotesk">Start recruiting streetcred developers, Today!!</p>
     </div>
     
-    <form class="flex flex-col gap-[20px]" on:submit|preventDefault={() => {
-      $page = 2;
-      updateNames
-      }}>
       <div class="px-[16px]">
-        <Text id="firstName" placeholder={"First Name"} name={"firstName"}></Text>
-        <Text id="lastName" placeholder={"Last Name"} name={"lastName"}></Text>
-        </div>
-        <div class="px-[16px] w-full flex flex-col gap-[10px]">
-          <Button on:click={function(){
-            $page = 2;
-            updateNames}
-          } type={"submit"}>Proceed</Button>
-        </div>
-    </form>
+          <input id="firstName" placeholder="First Name" bind:value={$firstName} type="text" class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#888888] placeholder-[#888888bb] py-4 pl-2 outline-none">
+
+          <input id="lastName" placeholder="Last Name" bind:value={$lastName} type="text" class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#888888] placeholder-[#888888bb] py-4 pl-2 outline-none">
+      </div>
+      
+      <div class="px-[16px] w-full flex flex-col gap-[10px]">
+        <Button on:click={() =>{
+          console.log("clicked");
+          nextPage();
+        }} type={"button"}>Proceed</Button>
+      </div>
     
-    <div class="px-[16px] w-full flex flex-row justify-start">
-      <AccountQuestion/>
-    </div>
+      <div class="px-[16px] w-full flex flex-row justify-start">
+        <AccountQuestion/>
+      </div>
   </div>
 </div>

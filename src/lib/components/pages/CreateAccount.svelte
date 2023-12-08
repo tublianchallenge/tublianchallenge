@@ -4,10 +4,15 @@
   import Text from "$lib/components/inputs/Text.svelte";
   import AccountQuestion from "$lib/components/main/AccountQuestion.svelte";
   import Navbar from "$lib/components/main/Navbar.svelte";
+  import { email, firstName, lastName, page, password } from "$lib/stores/model";
+  import { onMount } from 'svelte';
 
-  import { email, page, password } from "$lib/stores/model";
-  
+  onMount(async () =>{
+    console.log(`first name is ${$firstName}`);
+  });
+
   import bcrypt from "bcrypt";
+  
   function updateCredentials(event){
       $email = event.target.email.value;
       $password = event.target.password.value;
@@ -31,7 +36,7 @@
 
     <div class="flex flex-col gap-[5px] w-full">
       <p class="text-white/90 font-space-grotesk text-[20px] font-[700] mt-[20px]">Create Account</p>
-      <p class="text-white/80 font-space-grotesk">Creating account for <span class="text-[#4AA3FF]">@John Doe</span></p>
+      <p class="text-white/80 font-space-grotesk">Creating account for <span class="text-[#4AA3FF]">@{$firstName} {$lastName}</span></p>
     </div>
     <form action="" class="flex flex-col gap-[20px] items-start w-full" on:submit|preventDefault={() => {
       $page = 3;
