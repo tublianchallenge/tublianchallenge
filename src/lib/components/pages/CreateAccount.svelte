@@ -1,27 +1,31 @@
 <script lang="ts">
+  import { goto } from "$app/navigation";
+
+    
+	import { ThemeSupa } from '@supabase/auth-ui-shared';
+	import { Auth } from '@supabase/auth-ui-svelte';
+
+	export let data
 
   import Button from "$lib/components/buttons/Button.svelte";
-  import Text from "$lib/components/inputs/Text.svelte";
   import AccountQuestion from "$lib/components/main/AccountQuestion.svelte";
   import Navbar from "$lib/components/main/Navbar.svelte";
-  import { email, firstName, lastName, page, password } from "$lib/stores/model";
+  import { email, firstName, lastName, password } from "$lib/stores/model";
   import { onMount } from 'svelte';
 
   onMount(async () =>{
     console.log(`first name is ${$firstName}`);
   });
 
-  import bcrypt from "bcrypt";
   
   function updateCredentials(event){
       $email = event.target.email.value;
       $password = event.target.password.value;
     }
 
-    async function hashPassword(password: string){
-
-      return await bcrypt 
-    }
+  function nextPage(){
+    goto("/setup");
+  }
 </script>
     
 <div class="flex flex-row">
@@ -38,15 +42,23 @@
       <p class="text-white/90 font-space-grotesk text-[20px] font-[700] mt-[20px]">Create Account</p>
       <p class="text-white/80 font-space-grotesk">Creating account for <span class="text-[#4AA3FF]">@{$firstName} {$lastName}</span></p>
     </div>
-    <form action="" class="flex flex-col gap-[20px] items-start w-full" on:submit|preventDefault={() => {
-      $page = 3;
-      updateCredentials;
-      }}>
-    <div class="flex flex-col items-start w-full">
-      <Text id={"email"} placeholder={"Email"} name={"email"}></Text>
-      <Text  type={"password"} id={"password"} placeholder={"Password"} name={"password"}></Text>
-    </div>
     
+    <div class="flex flex-col items-start w-full">
+      <input id="email" placeholder="Email" bind:value={$email} type="text" class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#888888] placeholder-[#888888bb] py-4 pl-2 outline-none">
+
+      <input id="password" placeholder="Password" bind:value={$password} type="text" class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#888888] placeholder-[#888888bb] py-4 pl-2 outline-none">
+    </div>
+    <div class="flex row flex-center">
+      <div class="col-6 form-widget">
+        <Auth
+          supabaseClient={data.supabase}
+          view="magic_link"
+          redirectTo={`${data.url}/auth/callback`}
+          showLinks={false}
+          appearance={{ theme: ThemeSupa, style: { input: 'color: #fff' } }}
+        />
+      </div>
+    </div>
     <div class="w-full">
       <Button type={"submit"}>Create Account</Button>
       <div class="flex flex-row items-center w-full md:w-[405px]">
@@ -56,7 +68,6 @@
       </div>
       <Button category={"google"}>Sign up with google</Button>
     </div>
-    </form>
     <AccountQuestion/>
   </div>
 </div>

@@ -28,6 +28,8 @@
 	"type": "module",
 	"dependencies": {
 		"@supabase/auth-helpers-sveltekit": "^0.10.7",
+		"@supabase/auth-ui-shared": "^0.1.8",
+		"@supabase/auth-ui-svelte": "^0.2.8",
 		"@supabase/supabase-js": "^2.39.0",
 		"aws-sdk": "^2.1514.0",
 		"bcrypt": "^5.1.1",
