@@ -2,11 +2,6 @@
   import { goto } from "$app/navigation";
 
     
-	import { ThemeSupa } from '@supabase/auth-ui-shared';
-	import { Auth } from '@supabase/auth-ui-svelte';
-
-	export let data
-
   import Button from "$lib/components/buttons/Button.svelte";
   import AccountQuestion from "$lib/components/main/AccountQuestion.svelte";
   import Navbar from "$lib/components/main/Navbar.svelte";
@@ -48,17 +43,7 @@
 
       <input id="password" placeholder="Password" bind:value={$password} type="text" class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#888888] placeholder-[#888888bb] py-4 pl-2 outline-none">
     </div>
-    <div class="flex row flex-center">
-      <div class="col-6 form-widget">
-        <Auth
-          supabaseClient={data.supabase}
-          view="magic_link"
-          redirectTo={`${data.url}/auth/callback`}
-          showLinks={false}
-          appearance={{ theme: ThemeSupa, style: { input: 'color: #fff' } }}
-        />
-      </div>
-    </div>
+    
     <div class="w-full">
       <Button type={"submit"}>Create Account</Button>
       <div class="flex flex-row items-center w-full md:w-[405px]">
