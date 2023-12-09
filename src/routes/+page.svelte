@@ -9,17 +9,12 @@
     import type { PageData } from './$types';
     export let data: PageData;
     
-    $: ({ supabase, session } = data);
 
-    let loadedData = [];
-    async function loadData() {
-      const { data } = await supabase.from('test').select('*').limit(20);
-      loadedData = data;
-    }
+    // function saveState(){
+    //   window.localStorage.set("page", $page);
+    // }
 
-    $: if (session) {
-      loadData();
-    }
+    // $: $page, saveState();
   </script>
 
   
