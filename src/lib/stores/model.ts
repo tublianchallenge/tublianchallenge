@@ -11,12 +11,15 @@ export let firstName = writable("");
 export let lastName = writable("");
 
 if(browser){
+
     const storedPage = window.localStorage.getItem("page");
+     
     if (storedPage !== null) {
         page.set(parseInt(storedPage, 10) || 1);
     } else {
         page.set(1); // Default value if localStorage doesn't have "page"
-    } 
+    }
+
     firstName.set(window.localStorage.getItem("firstName") || "");
     lastName.set(window.localStorage.getItem("lastName") || "");
 }

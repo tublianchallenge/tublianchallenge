@@ -55,8 +55,8 @@
       </div>
 
       <div class="flex font-space-grotesk flex-row gap-[15px] pt-32 md:pt-56 items-end px-4 w-full  grow text-[#AAAAAA]">
-        <a href="">Privacy Policy</a>
-        <a href="">Terms</a>
+        <a href="https://www.tublian.com/privacy">Privacy Policy</a>
+        <a href="https://www.tublian.com/terms">Terms</a>
     </div>
   </div>
 
