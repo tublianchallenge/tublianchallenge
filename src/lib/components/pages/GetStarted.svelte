@@ -1,7 +1,6 @@
 <script lang="ts">
     import { browser } from '$app/environment';
-    import { goto } from '$app/navigation';
-    import { firstName, lastName } from "$lib/stores/model";
+    import { firstName, lastName, page } from "$lib/stores/model";
     import Button from "../buttons/Button.svelte";
     import AccountQuestion from "../main/AccountQuestion.svelte";
     import Navbar from "../main/Navbar.svelte";
@@ -12,6 +11,7 @@
 
     $: $firstName, saveNames();
     $: $lastName, saveNames();
+    $: $page, nextPage();
     
     function saveNames(){
       if(browser){
@@ -21,7 +21,7 @@
     }
 
     function nextPage(){
-      goto('/create');
+      $page = 2;
     }
     
 </script>

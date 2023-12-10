@@ -1,13 +1,33 @@
 <script lang="ts">
-  import { goto } from "$app/navigation";
+    import { enhance } from "$app/forms";
 
+  
     
   import Button from "$lib/components/buttons/Button.svelte";
   import AccountQuestion from "$lib/components/main/AccountQuestion.svelte";
   import Navbar from "$lib/components/main/Navbar.svelte";
   import { email, firstName, lastName, password } from "$lib/stores/model";
   import { onMount } from 'svelte';
+  import { z } from "zod";
+  
+const invalid_type_error = 'Invalid type provided for this field';
+const required_error = 'This field cannot be blank';
 
+export const SignUpSchema = z.object({
+ fullName: z
+  .string({ invalid_type_error, required_error })
+  .min(1, 'Value is too short'),
+ username: z
+  .string({ invalid_type_error, required_error })
+  .min(1, 'Value is too short'),
+ email: z
+  .string({ invalid_type_error, required_error })
+  .email('Please provide a valid email')
+  .min(1, 'Value is too short'),
+ password: z
+  .string({ invalid_type_error, required_error })
+  .min(6, 'Password is too short'),
+});
   onMount(async () =>{
     console.log(`first name is ${$firstName}`);
   });
@@ -17,10 +37,6 @@
       $email = event.target.email.value;
       $password = event.target.password.value;
     }
-
-  function nextPage(){
-    goto("/setup");
-  }
 </script>
     
 <div class="flex flex-row">
@@ -37,22 +53,25 @@
       <p class="text-white/90 font-space-grotesk text-[20px] font-[700] mt-[20px]">Create Account</p>
       <p class="text-white/80 font-space-grotesk">Creating account for <span class="text-[#4AA3FF]">@{$firstName} {$lastName}</span></p>
     </div>
-    
-    <div class="flex flex-col items-start w-full">
-      <input id="email" placeholder="Email" bind:value={$email} type="text" class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#888888] placeholder-[#888888bb] py-4 pl-2 outline-none">
+    <form use:enhance class="flex flex-col justify-start h-full w-full gap-[20px] items-start">
 
-      <input id="password" placeholder="Password" type="password" bind:value={$password}  class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#888888] placeholder-[#888888bb] py-4 pl-2 outline-none">
-    </div>
-    
-    <div class="w-full">
-      <Button type={"submit"}>Create Account</Button>
-      <div class="flex flex-row items-center w-full md:w-[405px]">
-        <div class="grow h-[1px] bg-slate-500/40"></div>
-        <p class="text-white/50 font-space-grotesk text-[15px] m-2 font-thin">Or</p>
-        <div class="grow h-[1px] bg-slate-500/40"></div>
+      <div class="flex flex-col items-start w-full">
+        <input id="email" placeholder="Email" bind:value={$email} type="text" class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#888888] placeholder-[#888888bb] py-4 pl-2 outline-none">
+  
+        <input id="password" placeholder="Password" type="password" bind:value={$password}  class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#888888] placeholder-[#888888bb] py-4 pl-2 outline-none">
       </div>
-      <Button category={"google"}>Sign up with google</Button>
-    </div>
+      
+      <div class="w-full">
+        <Button type={"submit"}>Create Account</Button>
+        <div class="flex flex-row items-center w-full md:w-[405px]">
+          <div class="grow h-[1px] bg-slate-500/40"></div>
+          <p class="text-white/50 font-space-grotesk text-[15px] m-2 font-thin">Or</p>
+          <div class="grow h-[1px] bg-slate-500/40"></div>
+        </div>
+        <Button type={"button"} category={"google"}>Sign up with google</Button>
+      </div>
+    </form>
+    
     <AccountQuestion/>
   </div>
 </div>

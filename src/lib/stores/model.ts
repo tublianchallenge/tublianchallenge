@@ -3,10 +3,7 @@ import { browser } from '$app/environment';
 import { writable } from "svelte/store";
 
 export let page = writable(1);
-
-
 export let dateCreated: Date;
-
 export let firstName = writable("");
 export let lastName = writable("");
 
