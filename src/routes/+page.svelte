@@ -4,11 +4,15 @@
     import AccountSetup from "$lib/components/pages/AccountSetup.svelte";
     import CreateAccount from "$lib/components/pages/CreateAccount.svelte";
     import GetStarted from "$lib/components/pages/GetStarted.svelte";
-    import { page } from "$lib/stores/model";
 
-    import type { PageData } from './$types';
-    export let data: PageData;
+    import { createClient } from '@supabase/supabase-js';
+
+    const supabase = createClient('your-supabase-url', 'your-supabase-api-key');
     
+  let email = '';
+  let password = '';
+
+ 
 
     // function saveState(){
     //   window.localStorage.set("page", $page);
