@@ -1,13 +1,10 @@
 <script lang="ts">
-    
-  
-    
   import Button from "$lib/components/buttons/Button.svelte";
   import AccountQuestion from "$lib/components/main/AccountQuestion.svelte";
   import Navbar from "$lib/components/main/Navbar.svelte";
   import { gotoPage } from "$lib/middleware/savePage";
   import { email, firstName, lastName, password } from "$lib/stores/model";
-  
+ 
 </script>
 
 <div class="flex flex-row">
@@ -22,9 +19,7 @@
 
     <div class="flex flex-col gap-[5px] w-full">
       <p class="text-white/90 font-space-grotesk text-[20px] font-[700] mt-[20px]">Create Account</p>
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <!-- svelte-ignore a11y-no-static-element-interactions -->
-      <p class="text-white/80 font-space-grotesk">Creating account for <span class="text-[#4AA3FF]" on:click={() => gotoPage(1)}>@{$firstName} {$lastName}</span></p>
+       <p class="text-white/80 font-space-grotesk">Creating account for <button class="text-[#4AA3FF]" on:click={() => gotoPage(1)}>@{$firstName} {$lastName}</button></p>
     </div>
     
     <form action="?/signUp" method="post" class="flex flex-col justify-start h-full w-full gap-[20px] items-start">
