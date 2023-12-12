@@ -29,10 +29,10 @@
 
       <div class="flex flex-col items-start w-full">
         <input name="email" id="email" placeholder="Email" bind:value={$email} type="text" class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#888888] placeholder-[#888888bb] py-4 pl-2 outline-none">
- ; 
+        
         <input name="password" id="password" placeholder="Password" type="password" bind:value={$password}  class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#888888] placeholder-[#888888bb] py-4 pl-2 outline-none">
       </div>
-      
+       
       <div class="w-full">
         <Button type={"submit"}>Create Account</Button>
         <div class="flex flex-row items-center w-full md:w-[405px]">

@@ -8,7 +8,6 @@
      * @param {{ target: { firstName: { value: string; }; lastName: { value: string; }; }; }} event
      */
 
-
     $: $firstName, saveNames();
     $: $lastName, saveNames();
     $: $page, nextPage();

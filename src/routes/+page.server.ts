@@ -8,20 +8,28 @@ export const actions: Actions = {
 
         let email: string = body.email as string;
         let password: string = body.password as string;
-       
-        if (!email || !password) {
+
+        console.log(`sending user email: ${email}\n
+                     sending user password: ${password}\n`)
+
+        if( !email || !password ){
             return fail(400, {
                 error: "need username and password"
-            })
+            });
         }
 
-        
-        console.log("attempting to sign up with supabase");
-        const {data, error: err} = await locals.supabase.auth.signUp({
-            email: body.email as string ,
-            password: body.password as string
-        });
+        console.log("attempting to sign up with supabase\n");
 
+        const {data, error: err} = await locals.supabase.auth.signUp({
+            email: body.email as string,
+            password: body.password as string,
+            options: {
+              data: {
+                first_name: 'John',
+                age: 27,
+              },
+            },
+        });
 
         if(err){
             if(err instanceof AuthApiError && err.status == 400){
@@ -34,11 +42,10 @@ export const actions: Actions = {
 
                 return fail(500, {
                     error: "The server doesn't like you get over it."
-                })
+                });
             }
            
         }
-        throw redirect(303, "/")
-
+        throw redirect(303, "/");
     }
 };
