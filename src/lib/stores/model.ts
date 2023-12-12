@@ -8,7 +8,7 @@ export let firstName = writable("");
 export let lastName = writable("");
 
 if(browser){
-
+    
     const storedPage = window.localStorage.getItem("page");
      
     if (storedPage !== null) {

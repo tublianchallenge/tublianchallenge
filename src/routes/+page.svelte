@@ -5,6 +5,7 @@
     import CreateAccount from "$lib/components/pages/CreateAccount.svelte";
     import GetStarted from "$lib/components/pages/GetStarted.svelte";
     import { page } from "$lib/stores/model";
+    
     // $: $page, saveState();
   </script>
 

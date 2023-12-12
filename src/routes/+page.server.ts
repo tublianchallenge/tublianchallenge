@@ -8,10 +8,9 @@ export const actions: Actions = {
         //turning form request data into js object
         const body = Object.fromEntries(await request.formData());
 
-        //for database consistency having some letters uppercase and others
-        //lowercase bothers me when looking at a data table
-        let email: string = (body.email as string).toLowerCase();
-        let password: string = (body.password as string).toLowerCase();
+        
+        let email: string = body.email as string;
+        let password: string = body.password as string;
         
         console.log(`sending user email: ${email}\n`);
         console.log(`sending user password: ${password}\n`);

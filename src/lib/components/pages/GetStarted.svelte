@@ -1,6 +1,7 @@
 <script lang="ts">
     import { browser } from '$app/environment';
-    import { firstName, lastName, page } from "$lib/stores/model";
+    import { gotoPage } from '$lib/middleware/savePage';
+    import { firstName, lastName } from "$lib/stores/model";
     import Button from "../buttons/Button.svelte";
     import AccountQuestion from "../main/AccountQuestion.svelte";
     import Navbar from "../main/Navbar.svelte";
@@ -10,17 +11,12 @@
 
     $: $firstName, saveNames();
     $: $lastName, saveNames();
-    $: $page, nextPage();
     
     function saveNames(){
       if(browser){
         window.localStorage.setItem("firstName", $firstName);
         window.localStorage.setItem("lastName", $lastName);
       }
-    }
-
-    function nextPage(){
-      $page = 2;
     }
     
 </script>
@@ -46,7 +42,7 @@
       </div>
       
       <div class="px-[16px] w-full flex flex-col gap-[10px]">
-        <Button on:click={nextPage} type={"button"}>Proceed</Button>
+        <Button on:click={() => gotoPage(2)} type={"button"}>Proceed</Button>
       </div>
     
       <div class="px-[16px] w-full flex flex-row justify-start">
