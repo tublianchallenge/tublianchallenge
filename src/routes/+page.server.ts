@@ -25,8 +25,9 @@ export const actions: Actions = {
             password: body.password as string,
             options: {
               data: {
-                first_name: 'John',
-                age: 27,
+                first_name: `${body.first_name as string}`,
+                last_name: `${body.last_name as string}`,
+                payment_plan: "new",
               },
             },
         });
