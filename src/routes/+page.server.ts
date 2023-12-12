@@ -4,13 +4,17 @@ import { fail, redirect, type Actions } from "@sveltejs/kit";
 
 export const actions: Actions = {
     signUp: async ({request, locals}) =>{
+
+        //turning form request data into js object
         const body = Object.fromEntries(await request.formData());
 
-        let email: string = body.email as string;
-        let password: string = body.password as string;
-
-        console.log(`sending user email: ${email}\n
-                     sending user password: ${password}\n`)
+        //for database consistency having some letters uppercase and others
+        //lowercase bothers me when looking at a data table
+        let email: string = (body.email as string).toLowerCase();
+        let password: string = (body.password as string).toLowerCase();
+        
+        console.log(`sending user email: ${email}\n`);
+        console.log(`sending user password: ${password}\n`);
 
         if( !email || !password ){
             return fail(400, {
@@ -36,13 +40,13 @@ export const actions: Actions = {
             if(err instanceof AuthApiError && err.status == 400){
             console.log("invalid email and password")
                 return fail(400,{
-                    error: "Your email or password is invalid. Get over it."
+                    error: `${email} or password is invalid. Get over it.`
                 });
             }else{
                 console.error("server error", err)
 
                 return fail(500, {
-                    error: "The server doesn't like you get over it."
+                    error: "The server doesn't like this. Get over it."
                 });
             }
            
