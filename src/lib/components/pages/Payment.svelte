@@ -2,187 +2,138 @@
 <script>
   export let tickImage = "./img/tick-circle.svg";
   export let starImage = "./img/star-66.svg";
-
-  const frameStyle = {
-    position: "relative",
-    width: "580px",
-    height: "491px",
-    backgroundColor: "var(--base50-dark)",
-    borderRadius: "20px",
-    overflow: "hidden",
-    borderColor: "var(--base100-dark)",
-  };
   
-  const overlapStyle = {
-    position: "absolute",
-    width: "580px",
-    height: "314px",
-    top: "0",
-    left: "0",
-  };
-
-  const logoWrapperStyle = {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "385px",
-    position: "absolute",
-    top: "20px",
-    left: "20px",
-  };
-
-  const logoStyle = {
-    position: "relative",
-    width: "123px",
-    height: "25.08px",
-  };
-
-  const groupWrapperStyle = {
-    position: "absolute",
-    width: "580px",
-    height: "314px",
-    top: "0",
-    left: "0",
-    backgroundImage: "url(./img/frame-658.svg)",
-    backgroundSize: "100% 100%",
-  };
-
-  const groupStyle = {
-    position: "relative",
-    width: "177px",
-    height: "177px",
-    top: "68px",
-    left: "202px",
-  };
-
-  const overlapGroupStyle = {
-    position: "relative",
-    width: "159px",
-    height: "159px",
-    top: "9px",
-    left: "9px",
-    backgroundImage: `url(${starImage})`,
-    backgroundSize: "100% 100%",
-  };
-
-  const tickStyle = {
-    position: "absolute",
-    width: "95px",
-    height: "95px",
-    top: "32px",
-    left: "32px",
-  };
-
-  const textWrapperStyle = {
-    position: "absolute",
-    width: "540px",
-    top: "325px",
-    left: "20px",
-    fontFamily: "var(--text-3xl-font-bold-font-family)",
-    fontWeight: "var(--text-3xl-font-bold-font-weight)",
-    color: "var(--base800-dark)",
-    fontSize: "var(--text-3xl-font-bold-font-size)",
-    textAlign: "center",
-    letterSpacing: "var(--text-3xl-font-bold-letter-spacing)",
-    lineHeight: "var(--text-3xl-font-bold-line-height)",
-    fontStyle: "var(--text-3xl-font-bold-font-style)",
-  };
-
-  const paragraphStyle = {
-    position: "absolute",
-    width: "540px",
-    top: "378px",
-    left: "20px",
-    fontFamily: "var(--text-base-font-medium-font-family)",
-    fontWeight: "var(--text-base-font-medium-font-weight)",
-    color: "var(--base800-dark)",
-    fontSize: "var(--text-base-font-medium-font-size)",
-    textAlign: "center",
-    letterSpacing: "var(--text-base-font-medium-letter-spacing)",
-    lineHeight: "var(--text-base-font-medium-line-height)",
-    fontStyle: "var(--text-base-font-medium-font-style)",
-  };
-
-  const buttonWrapperStyle = {
-    display: "flex",
-    width: "540px",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "8px",
-    padding: "8px 16px",
-    position: "absolute",
-    top: "431px",
-    left: "20px",
-    backgroundColor: "var(--primarygold-300)",
-    borderRadius: "30px",
-    all: "unset",
-    boxSizing: "border-box",
-  };
-
-  const buttonStyle = {
-    position: "relative",
-    width: "fit-content",
-    marginTop: "-1px",
-    fontFamily: "var(--text-base-font-medium-font-family)",
-    fontWeight: "var(--text-base-font-medium-font-weight)",
-    color: "var(--base900-light)",
-    fontSize: "var(--text-base-font-medium-font-size)",
-    letterSpacing: "var(--text-base-font-medium-letter-spacing)",
-    lineHeight: "var(--text-base-font-medium-line-height)",
-    whiteSpace: "nowrap",
-    fontStyle: "var(--text-base-font-medium-font-style)",
-    all: "unset",
-    boxSizing: "border-box",
-  };
-</script>
-
 <style>
   .frame {
-    {@html frameStyle}
-  }
+  position: relative;
+  width: 580px;
+  height: 491px;
+  background-color: var(--base50-dark);
+  border-radius: 20px;
+  overflow: hidden;
+  border-color: var(--base100-dark);
+}
 
-  .frame .overlap {
-    {@html overlapStyle}
-  }
+.frame .overlap {
+  position: absolute;
+  width: 580px;
+  height: 314px;
+  top: 0;
+  left: 0;
+}
 
-  .frame .div {
-    {@html logoWrapperStyle}
-  }
+.frame .div {
+  display: inline-flex;
+  align-items: center;
+  gap: 385px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
 
-  .frame .logo {
-    {@html logoStyle}
-  }
+.frame .logo {
+  position: relative;
+  width: 123px;
+  height: 25.08px;
+}
 
-  .frame .group-wrapper {
-    {@html groupWrapperStyle}
-  }
+.frame .group-wrapper {
+  position: absolute;
+  width: 580px;
+  height: 314px;
+  top: 0;
+  left: 0;
+  background-image: url(./img/frame-658.svg);
+  background-size: 100% 100%;
+}
 
-  .frame .group {
-    {@html groupStyle}
-  }
+.frame .group {
+  position: relative;
+  width: 177px;
+  height: 177px;
+  top: 68px;
+  left: 202px;
+}
 
-  .frame .overlap-group {
-    {@html overlapGroupStyle}
-  }
+.frame .overlap-group {
+  position: relative;
+  width: 159px;
+  height: 159px;
+  top: 9px;
+  left: 9px;
+  background-image: url(./img/star-66.svg);
+  background-size: 100% 100%;
+}
 
-  .frame .vuesax-bold-tick {
-    {@html tickStyle}
-  }
+.frame .vuesax-bold-tick {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  top: 32px;
+  left: 32px;
+}
 
-  .frame .text-wrapper {
-    {@html textWrapperStyle}
-  }
+.frame .text-wrapper {
+  position: absolute;
+  width: 540px;
+  top: 325px;
+  left: 20px;
+  font-family: var(--text-3xl-font-bold-font-family);
+  font-weight: var(--text-3xl-font-bold-font-weight);
+  color: var(--base800-dark);
+  font-size: var(--text-3xl-font-bold-font-size);
+  text-align: center;
+  letter-spacing: var(--text-3xl-font-bold-letter-spacing);
+  line-height: var(--text-3xl-font-bold-line-height);
+  font-style: var(--text-3xl-font-bold-font-style);
+}
 
-  .frame .p {
-    {@html paragraphStyle}
-  }
+.frame .p {
+  position: absolute;
+  width: 540px;
+  top: 378px;
+  left: 20px;
+  font-family: var(--text-base-font-medium-font-family);
+  font-weight: var(--text-base-font-medium-font-weight);
+  color: var(--base800-dark);
+  font-size: var(--text-base-font-medium-font-size);
+  text-align: center;
+  letter-spacing: var(--text-base-font-medium-letter-spacing);
+  line-height: var(--text-base-font-medium-line-height);
+  font-style: var(--text-base-font-medium-font-style);
+}
 
-  .frame .button  {
-    {@html buttonWrapperStyle}
-  }
+.frame .button {
+  display: flex;
+  width: 540px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  position: absolute;
+  top: 431px;
+  left: 20px;
+  background-color: var(--primarygold-300);
+  border-radius: 30px;
+  all: unset;
+  box-sizing: border-box;
+}
 
-  .frame .button-2 {
-    {@html buttonStyle}
-  }
+.frame .button-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--text-base-font-medium-font-family);
+  font-weight: var(--text-base-font-medium-font-weight);
+  color: var(--base900-light);
+  font-size: var(--text-base-font-medium-font-size);
+  letter-spacing: var(--text-base-font-medium-letter-spacing);
+  line-height: var(--text-base-font-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--text-base-font-medium-font-style);
+  all: unset;
+  box-sizing: border-box;
+}
 </style>
 
 <div class="frame">
