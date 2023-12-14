@@ -61,7 +61,7 @@
   height: 159px;
   top: 9px;
   left: 9px;
-  background-image: url(./img/star-66.svg);
+  background-image: src " href "
   background-size: 100% 100%;
 }
 
