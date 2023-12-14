@@ -9,7 +9,7 @@
     // $: $page, saveState();
   </script>
 
-  
+ 
   {#if $page == 1 }
   <GetStarted/>
   {:else if $page == 2}
