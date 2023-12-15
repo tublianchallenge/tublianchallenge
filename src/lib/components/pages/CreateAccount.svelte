@@ -4,7 +4,7 @@
   import Navbar from "$lib/components/main/Navbar.svelte";
   import { gotoPage } from "$lib/middleware/savePage";
   import { email, firstName, lastName, password } from "$lib/stores/model";
-    import Loading from "./Loading.svelte";
+  import Loading from "./Loading.svelte";
  
   export let form: FormData;
 

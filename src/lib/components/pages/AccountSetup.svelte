@@ -1,7 +1,9 @@
 <script>
+    import { gotoPage } from "$lib/middleware/savePage";
     import Button from "../buttons/Button.svelte";
     import RadioCard from "../inputs/RadioCard.svelte";
     import Navbar from "../main/Navbar.svelte";
+    
 </script>
 
 <div class="px-[16px] py-[25px] flex flex-col justify-start h-full w-full gap-[20px] items-center ">
@@ -19,7 +21,7 @@
     </div>
 
     <div class="flex flex-row justify-center w-full" >
-        <Button> Next</Button>
+        <Button on:click={() => gotoPage(1)}> Next</Button>
     </div>
     <div class="">
         <ul class="flex flex-row gap-4 font-[400] font-space-grotesk text-[#B7B7B7bb]">

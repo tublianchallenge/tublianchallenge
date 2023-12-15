@@ -63,7 +63,7 @@
       </div>
       {:else}
       <div class="px-[16px] w-full flex flex-col gap-[10px]">
-        <Button on:click={() => gotoPage(2)} type={"button"}>Proceed</Button>
+        <Button on:click={ () => gotoPage(2)} type={"button"}>Proceed</Button>
       </div>
       {/if}
       <div class="px-[16px] w-full flex flex-row justify-start">

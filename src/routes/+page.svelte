@@ -15,15 +15,17 @@
   </script>
 
   {#if $page == 1 }
-  <Loading/>
-  <GetStarted {form}/>
+    <Loading/>
+    <GetStarted {form}/>
+    
   {:else if $page == 2}
-  <Loading/>
-  <CreateAccount {form}/>
-  <Loading/>
+    <Loading/>
+    <CreateAccount {form}/>
+    <Loading/>
+
   {:else if $page == 3}
-  <Loading/>
-  <AccountSetup/>
+    <Loading/>
+    <AccountSetup/>
   {/if}
 
   <style lang="postcss">
