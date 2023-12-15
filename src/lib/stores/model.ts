@@ -20,5 +20,5 @@ export let dateCreated: Date;
 export let email = writable("");  //find way to validate later (maybe zod?)
 export let password = writable(""); //needs encryption, impleme
 export let reason = writable("");
-export let paymentPlan = writable(0);
+export let plan = writable(0);
 
