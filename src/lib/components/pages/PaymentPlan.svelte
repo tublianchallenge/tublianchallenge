@@ -35,8 +35,11 @@ import Feature from "../inputs/Feature.svelte";
                 on:click={() => {plan = 1}}>Monthly</button>
             </div>
             <div class="w-[50%] h-full bg-transparent rounded-[10px] flex flex-row items-center justify-center">
-                <button class="text-xl font-[500] text-[#FEFEFE]/80"
-                on:click={() => {plan = 2}}>Annually</button>
+                <button class="text-xl font-[500] text-[#FEFEFE]/80 flex flex-row  items-center gap-2 "
+                on:click={() => {plan = 2}}>Annually 
+                <div class="text-xs bg-[#445742] rounded-[33px] py-[4px] px-[6px]
+                text-[#76F368]">20% off</div>
+                </button>
             </div>   
         </div>
         {:else}
@@ -56,13 +59,13 @@ import Feature from "../inputs/Feature.svelte";
         {/if}
 
         <div class="flex flex-col gap-4 justify-center items-center w-full h-full md:flex-row">
-            <RadioCardPayment>
+            <RadioCardPayment cost={"19.99"}>
                 <Feature>Advanced search for developer profiles with filters.</Feature>
                 <Feature>Increased monthly messages to developers.</Feature>
                 <Feature>Priority support.</Feature>    
             </RadioCardPayment> 
 
-            <RadioCardPayment>
+            <RadioCardPayment cost={"49.99"}>
                 <Feature>Premium access to developer profiles and advanced search filters.</Feature>
                 <Feature>Increased monthly messages to developers.</Feature>
                 <Feature>Dedicated account manager for personalized support.</Feature>
