@@ -18,7 +18,7 @@ import Feature from "../inputs/Feature.svelte";
      
     <Navbar page={4}/>
 
-    <Stripe/>
+    <Stripe {cost}/>
     <div class="flex flex-col items-center w-full">
         <p class="text-white/90 font-space-grotesk text-[20px] font-[700] mt-[20px] text-center">Payment Plan</p>
          <p class="text-center text-white/80 font-space-grotesk w-[379px]">We will customize your experience based on your option.</p>

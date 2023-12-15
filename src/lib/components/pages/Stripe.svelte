@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
     import Text from "../inputs/Text.svelte";
-
+    export const cost: number;
 </script>
 
 <div class="flex overflow-hidden absolute top-0 left-0 z-30 flex-row justify-center p-20 w-screen bg-transparent backdrop-blur-lg h-fit font-space-grotesk">
-    <div id="paymentForm" class="w-full md:w-[580px] h-[1141px] bg-[#1E1E1E] rounded-[20px] p-[20px] flex flex-col gap-[40px]">
+    <div id="paymentForm" class="w-full md:w-[580px] h-[1141px] bg-[#1E1E1E] rounded-[20px] p-[20px] flex flex-col gap-[40px] relative">
         
         <div class="flex flex-row justify-between">
             <img src="/img/pages/tublian-full.png" alt="tublina logo" class="h-[24.91px]">
@@ -48,7 +48,9 @@
             </div>
          </div>
          <div>
-            <p class="font-[700] text-[#FEFEFE]">By clicking below, you agree to our Terms, Privacy Policy and Automatic Renewal. Tublian will charge you $49.99 (plus Tax) each month until you cancel you subscription in account settings.</p>
+            <p class="font-[500] text-[#FEFEFE] text-base">By clicking below, you agree to our <span class="text-[#FDD649]">Terms</span> ,  <span class="text-[#FDD649]">Privacy Policy</span> and  <span class="text-[#91C3FD]">Automatic Renewal</span>. Tublian will charge you $49.99 (plus Tax) each month until you cancel you subscription in account settings.</p>
          </div>
+
+         <Button>{cost}</Button>
 </div>
 </div>
