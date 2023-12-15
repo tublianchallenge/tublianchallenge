@@ -3,7 +3,8 @@
 UI/UX challenge hosted by the tublian programming community meant to showcase developer skills
 
 
-![](assets/20231215_040118_Screenshot_2023-12-08 at 06.20.29.png)
+![image](https://github.com/tublianchallenge/tublianchallenge/assets/104405433/2501b491-c607-4983-a5de-811b9984045b)
+
 
 ## What it is
 
