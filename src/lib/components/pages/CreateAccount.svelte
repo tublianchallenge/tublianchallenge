@@ -9,6 +9,10 @@
   export let form: FormData;
 
   console.log(form)
+
+  function checkSuccess(){
+    
+  } 
 </script>
 
  
@@ -29,7 +33,7 @@
        <p class="text-white/80 font-space-grotesk">Creating account for <button class="text-[#4AA3FF]" on:click={() => gotoPage(1)}>@{$firstName} {$lastName}</button></p>
     </div>
     
-    <form action="?/signUp" method="post" class="flex flex-col justify-start items-start w-full h-full">
+    <form action="?/signUp" on:submit={gotoPage(3)} method="post" class="flex flex-col justify-start items-start w-full h-full">
 
       <div class="flex flex-col items-start w-full">
         {#if form?.errors?.email}

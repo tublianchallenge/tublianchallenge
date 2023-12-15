@@ -22,6 +22,7 @@
   <CreateAccount {form}/>
   <Loading/>
   {:else if $page == 3}
+  <Loading/>
   <AccountSetup/>
   {/if}
 

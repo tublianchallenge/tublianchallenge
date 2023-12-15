@@ -19,8 +19,8 @@ if(browser){
         page.set(1); // Default value if localStorage doesn't have "page"
     }
 
-    firstName.set(window.localStorage.getItem("firstName") || "");
-    lastName.set(window.localStorage.getItem("lastName") || "");
+    firstName.set(window.localStorage.getItem("firstName") || "First Name");
+    lastName.set(window.localStorage.getItem("lastName") || "Last Name");
 }
 
 export let email = writable("");  //find way to validate later (maybe zod?)

@@ -12,6 +12,7 @@
         <p class="text-[#CFCFCF] font-space-grotesk text-center">We will customize your experience based on your option.</p>
     </div> 
     <div class="flex flex-col md:flex-row gap-[20px] w-full my-2 md:my-6 md:justify-center">
+        
         <RadioCard title={"Team Projects"} description={"Hire developers for team projects."} image={"/img/checkbox/tublian-vector_team.png"}/>
         <RadioCard title={"Personal Projects"} description={"Hire developers for personal projects."} image={"/img/checkbox/tublian-vector_personal.png"}/>
         <RadioCard title={"Recruiting"} description={"Recruit developers for outstanding companies."} image={"/img/checkbox/tublian-vector_recruiting.png"}/>
