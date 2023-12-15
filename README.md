@@ -1,7 +1,5 @@
 # TUBLIAN CHALLENGE
 
-UI/UX challenge hosted by the tublian programming community meant to showcase developer skills
-
 
 ![image](https://github.com/tublianchallenge/tublianchallenge/assets/104405433/2501b491-c607-4983-a5de-811b9984045b)
 
@@ -44,10 +42,3 @@ Ayomide (Qudus) Hassan-(https://github.com/itsayopapi)
 <br>
 Deshawn (Marquis) Williams-(https://github.com/MarquisTheCoder)
 
->>>>>>> 29e235c9d3743bb46795238fff9364945c0f52ee
->>>>>>>
->>>>>>
->>>>>
->>>>
->>>
->>
