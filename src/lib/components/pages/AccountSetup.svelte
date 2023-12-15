@@ -1,5 +1,5 @@
 <script>
-    import { gotoPage } from "$lib/middleware/navigation";
+    import { page } from "$lib/stores/model";
     import Button from "../buttons/Button.svelte";
     import RadioCard from "../inputs/RadioCard.svelte";
     import Navbar from "../main/Navbar.svelte";
@@ -21,7 +21,10 @@
     </div>
 
     <div class="flex flex-row justify-center w-full" >
-        <Button on:click={() => gotoPage(1)}> Next</Button>
+        <Button  on:click={() => {
+            page.set(4);
+            window.localStorage.setItem("page","4")
+        }}> Next</Button>
     </div>
     <div class="">
         <ul class="flex flex-row gap-4 font-[400] font-space-grotesk text-[#B7B7B7bb]">

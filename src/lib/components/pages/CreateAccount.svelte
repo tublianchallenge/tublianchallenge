@@ -1,14 +1,18 @@
 <script lang="ts">
-  import Button from "$lib/components/buttons/Button.svelte";
+  import { browser } from "$app/environment";
+import Button from "$lib/components/buttons/Button.svelte";
   import AccountQuestion from "$lib/components/main/AccountQuestion.svelte";
   import Navbar from "$lib/components/main/Navbar.svelte";
-  import { email, firstName, lastName, password } from "$lib/stores/model";
+  import { email, firstName, lastName, page, password } from "$lib/stores/model";
   import Loading from "./Loading.svelte";
-  import { gotoPage } from "$lib/middleware/navigation";
   export let form: FormData;
 
   console.log(form)
-
+  function saveState(page){
+    if(browser){
+      window.localStorage.setItem("page", `${page}`)
+    }
+  }
 </script>
 
  
@@ -21,15 +25,22 @@
 
   <div class="px-[16px] py-[25px] flex flex-col justify-start h-full w-full  items-center">
     
+    {#if form?.page}
+        {page.set(form?.page)}
+        {saveState("3")}
+         
+      {/if}
     <Navbar page={2}/>
+
 
     <div class="flex flex-col gap-[5px] w-full">
       <p class="text-white/90 font-space-grotesk text-[20px] font-[700] mt-[20px]">Create Account</p>
-       <p class="text-white/80 font-space-grotesk">Creating account for <button class="text-[#4AA3FF]" on:click={() => gotoPage(1)}>@{$firstName} {$lastName}</button></p>
+       <p class="text-white/80 font-space-grotesk">Creating account for <button class="text-[#4AA3FF]" on:click={() => page.set(1)}>@{$firstName} {$lastName}</button></p>
     </div>
     
-    <form action="?/signUp" on:submit={gotoPage(3)} method="post" class="flex flex-col justify-start items-start w-full h-full">
-
+    <form action="?/signUp" method="post" class="flex flex-col justify-start items-start w-full h-full">
+      
+    
       <div class="flex flex-col items-start w-full">
         {#if form?.errors?.email}
           <input name="email" id="email" placeholder="Email" bind:value={$email} type="text" class="font-space-grotesk text-[#888888] w-full md:w-[405px] h-auto bg-[transparent] border-b-[1px] text-[18px] md:text-[20px] border-[#d61a1abe] placeholder-[#888888bb] py-4 pl-2 outline-none">

@@ -8,10 +8,9 @@
     import { page } from "$lib/stores/model";
     import { error } from "@sveltejs/kit";
     import { browser } from "$app/environment";
-    // $: $page, saveState();
-    export let form: FormData;
-    
+    import PaymentPlan from "$lib/components/pages/PaymentPlan.svelte";
 
+    export let form: FormData;    
   </script>
 
   {#if $page == 1 }
@@ -21,11 +20,12 @@
   {:else if $page == 2}
     <Loading/>
     <CreateAccount {form}/>
-    <Loading/>
-
   {:else if $page == 3}
     <Loading/>
     <AccountSetup/>
+  {:else if $page == 4}
+    <Loading/>
+    <PaymentPlan/>
   {/if}
 
   <style lang="postcss">

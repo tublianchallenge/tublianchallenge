@@ -29,7 +29,22 @@ export const actions: Actions = {
     signUp: async ({request, locals, url}) =>{
 
         const provider = url.searchParams.get("provider") as Provider;
+        if(provider){
+            const {data, error: err} = await locals.supabase.auth.signInWithOAuth({
+                provider: provider,   
+            })
 
+            if(err){
+                console.log(err);
+                return fail(400, {
+                    error: "something went wrong with google sign in :("
+                })
+            }
+            else{
+                console.log(data);
+                throw redirect(303, data.url);
+            }
+        }
         //turning form request data into js object
         const body = Object.fromEntries(await request.formData());
         try{
@@ -48,9 +63,8 @@ export const actions: Actions = {
 
         }
         if(provider){
-            const {data, error: err} = await locals.supabase.auth.signInWithOAuth({
-                provider: provider,
-                
+            const {data, error: err} = await locals.supabase.auth.sign({
+                provider: provider,   
             })
 
             if(err){
@@ -71,13 +85,18 @@ export const actions: Actions = {
             email: body.email as string,
             password: body.password as string,
             options: {
-              data: {
+              data: { 
+                confirmation_sent_at: Date.now(),
                 first_name: `${body.first_name as string}`,
                 last_name: `${body.last_name as string}`,
                 payment_plan: "new",
               },
             },
-        });
+        })
+
+        return{
+            page: 3
+        }
 
         if(err){
             if(err instanceof AuthApiError && err.status == 400){

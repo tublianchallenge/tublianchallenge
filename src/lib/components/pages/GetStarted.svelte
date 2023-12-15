@@ -1,10 +1,9 @@
 <script lang="ts">
     import { browser } from '$app/environment';
-    import { firstName, lastName } from "$lib/stores/model";
+    import { firstName, lastName , page} from "$lib/stores/model";
     import Button from "../buttons/Button.svelte";
     import AccountQuestion from "../main/AccountQuestion.svelte";
     import Navbar from "../main/Navbar.svelte";
-    import { page } from '$lib/stores/model';
     /**
      * @param {{ target: { firstName: { value: string; }; lastName: { value: string; }; }; }} event
      */
@@ -63,7 +62,9 @@
           </div>
         {:else}
           <div class="px-[16px] w-full flex flex-col gap-[10px]">
-            <Button on:click={ () => page.set(2)} type={"button"}>Proceed</Button>
+            <Button on:click={ () => {
+              window.localStorage.setItem("page","2");
+              page.set(2)}} type={"button"}>Proceed</Button>
           </div>
       {/if}
       <div class="px-[16px] w-full flex flex-row justify-start">

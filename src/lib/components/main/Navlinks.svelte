@@ -1,19 +1,18 @@
 
 <script lang="ts">
-    import { gotoPage } from "$lib/middleware/savePage";
-
     import { page } from "$lib/stores/model";
+    
 </script>
 
 <ul class="text-[#696969] flex flex-row gap-[12px] font-[400] w-full md:w-358px flex-wrap">
     <li class="selected">
-        <button on:click={gotoPage(1)}>1: Get Started</button>
+        <button >1: Get Started</button>
     </li>
     <li  class={$page >= 2 ? "selected" : ""}>
-        <button on:click={() => gotoPage(2)}>2: Create Account</button>
+        <button >2: Create Account</button>
     </li>
     <li class={$page >= 3 ? "selected" : ""}>
-        <button on:click={gotoPage(3)}>3: Account Setup</button></li>
+        <button >3: Account Setup</button></li>
     <li class={$page >= 4 ? "selected" : ""} >
         <button>4: Payment</button>
     </li>
