@@ -2,10 +2,9 @@
   import Button from "$lib/components/buttons/Button.svelte";
   import AccountQuestion from "$lib/components/main/AccountQuestion.svelte";
   import Navbar from "$lib/components/main/Navbar.svelte";
-  import { gotoPage } from "$lib/middleware/savePage";
   import { email, firstName, lastName, password } from "$lib/stores/model";
   import Loading from "./Loading.svelte";
- 
+  import { gotoPage } from "$lib/middleware/navigation";
   export let form: FormData;
 
   console.log(form)
