@@ -2,7 +2,8 @@
 <script>
   export let tickImage = "./img/tick-circle.svg";
   export let starImage = "./img/star-66.svg";
-  
+</script> 
+
 <style>
   .frame {
   position: relative;
@@ -61,7 +62,7 @@
   height: 159px;
   top: 9px;
   left: 9px;
-  background-image: src " href "
+  background-image: src " href ";
   background-size: 100% 100%;
 }
 

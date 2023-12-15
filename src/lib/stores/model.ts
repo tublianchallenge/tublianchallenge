@@ -14,7 +14,7 @@ if(browser){
     const storedPage = window.localStorage.getItem("page");
      
     if (storedPage !== null) {
-        page.set(parseInt(storedPage, 10) || 1);
+        page.set(parseInt(storedPage, 1) || 1);
     } else {
         page.set(1); // Default value if localStorage doesn't have "page"
     }

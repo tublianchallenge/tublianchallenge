@@ -10,13 +10,9 @@
 
   console.log(form)
 
-  function checkSuccess(){
-    
-  } 
 </script>
 
  
-<Loading/>
   
 <div class="flex flex-row">
   

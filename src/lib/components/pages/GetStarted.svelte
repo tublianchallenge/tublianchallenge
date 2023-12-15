@@ -10,11 +10,14 @@
      */
 
     export let form: FormData;
+    
     $: $firstName, saveNames();
     $: $lastName, saveNames();
+
     function init(el){
       el.focus()
     } 
+    
     function saveNames(){
       if(browser){
         window.localStorage.setItem("firstName", $firstName);
