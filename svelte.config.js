@@ -11,7 +11,7 @@
 // export default config;
 
 import node from '@sveltejs/adapter-node';
-const config {
+const config = {
 	kit: {
 		adapter: node(),
     methodOverride:{
