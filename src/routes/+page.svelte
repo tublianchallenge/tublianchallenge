@@ -7,7 +7,7 @@
     import Loading from "$lib/components/pages/Loading.svelte";
     import { page } from "$lib/stores/model";
     import { error } from "@sveltejs/kit";
-    
+    import { browser } from "$app/environment";
     // $: $page, saveState();
     export let form: FormData;
     

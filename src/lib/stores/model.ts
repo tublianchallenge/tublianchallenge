@@ -9,16 +9,7 @@ export let dateCreated: Date;
 export let firstName = writable("First Name");
 export let lastName = writable("Last Name");
 
-if(browser){
-    
-    const storedPage = window.localStorage.getItem("page");
-     
-    if (storedPage) {
-        page.set(parseInt(storedPage));
-    } else {
-        page.set(1); // Default value if localStorage doesn't have "page"
-    }
-
+if(browser){   
     firstName.set(window.localStorage.getItem("firstName") || "First Name");
     lastName.set(window.localStorage.getItem("lastName") || "Last Name");
 }
