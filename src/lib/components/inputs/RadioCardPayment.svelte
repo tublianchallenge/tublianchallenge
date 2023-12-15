@@ -10,7 +10,7 @@
             <div class="top-0 left-0 z-20 w-full h-full  rounded-[20px] pointer-events-none ">
                 <div class="relative w-full h-full  rounded-l-[20px] flex flex-col p-4 gap-[15px]">       
                         <div class="flex z-20 flex-col gap-3">
-                            {#if cost != "custom"}
+                            {#if cost !== "custom"}
                              <div class="flex flex-row">
                                 <p class="text-4xl font-[700] text-[#FEFEFE]/90">${cost}</p>
                                 <p class="text-lg text-[#B7B7B7]">/Monthly</p>
@@ -19,7 +19,7 @@
                             {:else}
                              
                             <div class="flex flex-row">
-                                <p class="text-xl font-[700] text-[#FEFEFE]/90">Test</p>
+                                <p class="text-xl font-[700] text-[#FEFEFE]/90">Custom Pricing</p>
                                 <p class="text-lg text-[#B7B7B7]">/Monthly</p>
                              </div>
                                 
