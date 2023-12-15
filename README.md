@@ -1,5 +1,3 @@
-# TUBLIAN CHALLENGE
-
 
 ![image](https://github.com/tublianchallenge/tublianchallenge/assets/104405433/2501b491-c607-4983-a5de-811b9984045b)
 
