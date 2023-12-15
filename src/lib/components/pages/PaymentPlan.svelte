@@ -7,7 +7,7 @@ import Feature from "../inputs/Feature.svelte";
     import Navbar from "../main/Navbar.svelte";
     import Stripe from "./Stripe.svelte";
 
-    export const cost = "";
+    let cost: number;
     let plan = 1;
 
     

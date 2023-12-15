@@ -1,6 +1,6 @@
 <script lang="ts">
-    import Text from "../inputs/Text.svelte";
-    export const cost: number;
+    import Button from "../buttons/Button.svelte";
+import Text from "../inputs/Text.svelte";
 </script>
 
 <div class="flex overflow-hidden absolute top-0 left-0 z-30 flex-row justify-center p-20 w-screen bg-transparent backdrop-blur-lg h-fit font-space-grotesk">
@@ -50,7 +50,7 @@
          <div>
             <p class="font-[500] text-[#FEFEFE] text-base">By clicking below, you agree to our <span class="text-[#FDD649]">Terms</span> ,  <span class="text-[#FDD649]">Privacy Policy</span> and  <span class="text-[#91C3FD]">Automatic Renewal</span>. Tublian will charge you $49.99 (plus Tax) each month until you cancel you subscription in account settings.</p>
          </div>
-
-         <Button>{cost}</Button>
-</div>
+         
+         <Button><span class=" font-[500]">Pay $49.99</span></Button>
+</div>  
 </div>
