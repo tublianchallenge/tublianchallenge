@@ -49,7 +49,8 @@ export const actions: Actions = {
         }
         if(provider){
             const {data, error: err} = await locals.supabase.auth.signInWithOAuth({
-                provider: provider
+                provider: provider,
+                
             })
 
             if(err){
@@ -91,7 +92,7 @@ export const actions: Actions = {
                     error: "The server doesn't like this. Get over it."
                 });
             }
-           
+        
         }
         throw redirect(303, "/");
     }
