@@ -1,5 +1,9 @@
+<script>
+    import Text from "../inputs/Text.svelte";
 
-<div class="flex overflow-hidden absolute top-0 left-0 z-30 flex-row justify-center p-20 w-screen bg-transparent backdrop-blur-lg h-fit">
+</script>
+
+<div class="flex overflow-hidden absolute top-0 left-0 z-30 flex-row justify-center p-20 w-screen bg-transparent backdrop-blur-lg h-fit font-space-grotesk">
     <div id="paymentForm" class="w-full md:w-[580px] h-[1141px] bg-[#1E1E1E] rounded-[20px] p-[20px] flex flex-col gap-[40px]">
         
         <div class="flex flex-row justify-between">
@@ -22,7 +26,29 @@
             <div class="text-3xl font-[700]">$49.99<span class="font-[700] text-lg text-[#B7B7B7]">/Month</span></div>
                 </div>
             </div>
+
+           
         </div>
-        
-    </div>
+        <div class="flex flex-col px-[20px] gap-[20px]">
+            <p class="font-[700] text-xl leading-[32px] text-[#FEFEFE]">Payment Method</p> 
+            <p class="text-[#CFCFCF] font-[500]">Choose how you’d like to pay.</p>
+         </div>
+         <div>
+            
+         </div>
+         <div>
+            <p class="font-[700] text-lg leading-[32px] text-[#FEFEFE] flex flex-col">Payment Method</p> 
+            <div class="flex flex-col gap-[10px]">
+                <Text placeholder={"Email"}></Text>
+                <Text placeholder={"Card holder"}></Text>
+                <Text placeholder={"Card Number"}></Text>
+                <Text placeholder={"MM/YY"}></Text>
+                <Text placeholder={"CVV"}></Text>
+                <Text placeholder={"Country"}></Text>
+            </div>
+         </div>
+         <div>
+            <p class="font-[700] text-[#FEFEFE]">By clicking below, you agree to our Terms, Privacy Policy and Automatic Renewal. Tublian will charge you $49.99 (plus Tax) each month until you cancel you subscription in account settings.</p>
+         </div>
+</div>
 </div>
