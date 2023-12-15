@@ -21,7 +21,7 @@
     </div>
 
     <div class="flex flex-row justify-center w-full" >
-        <Button on:click={() => gotoPage(1)}> Next</Button>
+        <Button on:click={() => gotoPage(2)}> Next</Button>
     </div>
     <div class="">
         <ul class="flex flex-row gap-4 font-[400] font-space-grotesk text-[#B7B7B7bb]">
