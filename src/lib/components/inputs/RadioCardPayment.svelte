@@ -5,28 +5,43 @@
 </script>
 
 
-    <div class="relative w-full radio-card font-space-grotesk h-[464px] md:h-[464px] md:w-[301px]">
-            <input type="radio" name="use" {id} class="w-full h-full">
+    <div class="relative radio-card font-space-grotesk h-[464px] md:h-[464px] md:w-[301px]">
+            <input type="radio" name="use" {id} class="w-screen h-full md:w-full">
             <div class="top-0 left-0 z-20 w-full h-full  rounded-[20px] pointer-events-none ">
-                <div class="relative w-full h-full  rounded-l-[20px] flex flex-col p-4 gap-[15px]">       
+                <div class="relative w-full h-full  rounded-l-[20px] flex flex-col p-4 gap-[15px]">      
+
                         <div class="flex z-20 flex-col gap-3">
+
                             {#if cost !== "custom"}
-                             <div class="flex flex-row">
-                                <p class="text-4xl font-[700] text-[#FEFEFE]/90">${cost}</p>
-                                <p class="text-lg text-[#B7B7B7]">/Monthly</p>
-                             </div>
-                                
+                                    <div class="flex flex-row items-end">
+                                        <p class="text-4xl font-[700] text-[#FEFEFE]/90">${cost}</p>
+                                        <p class="text-lg text-[#B7B7B7]">/Monthly</p>
+                                    </div>
                             {:else}
-                             
-                            <div class="flex flex-row">
-                                <p class="text-xl font-[700] text-[#FEFEFE]/90">Custom Pricing</p>
-                                <p class="text-lg text-[#B7B7B7]">/Monthly</p>
-                             </div>
-                                
+                                    <div class="flex flex-row">
+                                        <p class="text-3xl font-[700] text-[#FEFEFE]/90">Custom Pricing</p>
+                                    </div>
                             {/if}
+
+
                             <p  class="text-xl text-[#B7B7B7] font-[500]">Features:</p> 
                             <slot/> 
-                            <Button></Button>
+
+
+                            {#if cost !== "custom"}
+                                <div class="flex absolute left-0 bottom-4 flex-row justify-center mt-16 w-full">
+                                    <div class="w-[90%]">
+                                        <Button>Subscribe</Button>
+                                    </div>
+                                    
+                                </div> 
+                            {:else}
+                                <div class="flex absolute left-0 bottom-4 flex-row justify-center mt-16 w-full">
+                                    <div class="w-[90%]">
+                                        <Button category={"special"}>Subscribe</Button>
+                                    </div>
+                                </div>   
+                            {/if}
                         </div>  
                 </div> 
             </div>;

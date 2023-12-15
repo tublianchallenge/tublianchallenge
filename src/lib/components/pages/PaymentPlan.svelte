@@ -5,6 +5,7 @@ import Feature from "../inputs/Feature.svelte";
     import RadioCard from "../inputs/RadioCard.svelte";
     import RadioCardPayment from "../inputs/RadioCardPayment.svelte";
     import Navbar from "../main/Navbar.svelte";
+    import Stripe from "./Stripe.svelte";
 
     export const cost = "";
     let plan = 1;
@@ -17,7 +18,7 @@ import Feature from "../inputs/Feature.svelte";
      
     <Navbar page={4}/>
 
-
+    <Stripe/>
     <div class="flex flex-col items-center w-full">
         <p class="text-white/90 font-space-grotesk text-[20px] font-[700] mt-[20px] text-center">Payment Plan</p>
          <p class="text-center text-white/80 font-space-grotesk w-[379px]">We will customize your experience based on your option.</p>
@@ -58,8 +59,8 @@ import Feature from "../inputs/Feature.svelte";
         </div>
         {/if}
 
-        <div class="flex flex-col gap-4 justify-center items-center w-full h-full md:flex-row">
-            <RadioCardPayment cost={"19.99"}>
+        <div class="flex flex-col gap-8 justify-center items-center w-full md:gap-7 md:flex-row">
+            <RadioCardPayment cost={"19.99"}> 
                 <Feature>Advanced search for developer profiles with filters.</Feature>
                 <Feature>Increased monthly messages to developers.</Feature>
                 <Feature>Priority support.</Feature>    
@@ -72,14 +73,17 @@ import Feature from "../inputs/Feature.svelte";
                 <Feature>Early access to new features and updates.</Feature>
             </RadioCardPayment>
 
-            <RadioCardPayment>
+            <RadioCardPayment cost={"custom"}>
                 <Feature>Tailored solutions for large enterprises or agencies.</Feature>
                 <Feature>Full access to all platform features, including custom integrations.</Feature> 
                 <Feature>Unlimited monthly messages to developers.</Feature>
                 <Feature>Priority support with 24/7 availability.</Feature> 
-            </RadioCardPayment>
-            
+            </RadioCardPayment> 
         </div>
-        
+
+        <div class="flex font-space-grotesk flex-row gap-[15px] items-end px-4 w-full  grow text-[#AAAAAA] justify-center pt-12">
+            <a href="https://www.tublian.com/privacy">Privacy Policy</a>
+            <a href="https://www.tublian.com/terms">Terms</a>
+        </div>
       </div>
 </div>
